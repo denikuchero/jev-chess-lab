@@ -1,6 +1,6 @@
 # Jev Chess Lab
 
-Five recorded chess experiments with TypeSafe Jev via OpenRouter: independent play,
+Six recorded chess experiments with TypeSafe Jev via OpenRouter: independent play,
 a tactical filter, Stockfish assistance, and a return to Jev-only play.
 
 **The Stockfish-assisted system won. Independent Jev still blunders pieces.
@@ -14,7 +14,14 @@ Assisted results are not evidence that Jev became a strong chess player.**
 Full-game looping GIFs, one ply per second. These are rendered replays, **not real-time recordings**.
 Click a GIF to open the interactive board with step-by-step controls.
 
-### 05 — Jev alone: explicit piece descriptions (new experiment)
+### 06 — Jev proposes, reviews three moves, then chooses (new)
+
+No chess advisor. Jev changed its first choice on 16/23 turns, but still lost
+by checkmate. 115 API calls, $0.008995; no reliable strength gain established.
+
+[![Jev proposal-review-selection loop](docs/games/06-jev-review-loop/replay.gif)](https://denikuchero.github.io/jev-chess-lab/games/06-jev-review-loop/replay.html)
+
+### 05 — Jev alone: explicit piece descriptions
 
 Stopped at the 60-call budget, **unfinished**, not a draw. Jev still blundered
 pieces and repeatedly moved its rook between d1 and e1. This prompt experiment
@@ -52,6 +59,7 @@ local compute is excluded. One game per configuration; no Elo estimate or traini
 | [03: Stockfish-assisted](docs/games/03-stockfish-assisted/game.pgn) | Jev chooses from Stockfish shortlist | Stockfish 14.1, Skill 5 | Won, 38.Rd8# | 38 | 63,194 / 1,522 | $0.002654148 |
 | [04: Pure + history](docs/games/04-pure-history/game.pgn) | Jev, expanded prompt + SAN history | Same local bot, seed 42 | Lost, 17…Qxd1# | 17 | 21,875 / 4,690 | $0.00091875 |
 | [05: Explicit pieces](docs/games/05-pure-explicit-pieces/game.pgn) | Jev, square-to-piece map + descriptive moves | Same local bot, seed 42 | Unfinished at limit, material deficit | 60 | 125,643 / 13,170 | $0.005277006 |
+| [06: Jev review loop](docs/games/06-jev-review-loop/game.pgn) | Jev proposes, critiques and selects | Same local bot, seed 42 | Lost, 23…Qd1# | 115 | 214,165 / 32,060 | $0.00899493 |
 
 Every game folder includes an interactive HTML board, MP4, PGN and actual JSON
 requests/responses, positions, latency and usage. Provider request IDs were removed.
@@ -66,6 +74,7 @@ real-time demonstrations.** Measured decision latency is shown separately. No au
 - [03 — Stockfish assistance](docs/games/03-stockfish-assisted/replay.mp4)
 - [04 — independent Jev with history](docs/games/04-pure-history/replay.mp4)
 - [05 — independent Jev with explicit piece descriptions](docs/games/05-pure-explicit-pieces/replay.mp4)
+- [06 — Jev proposal-review-selection loop](docs/games/06-jev-review-loop/replay.mp4)
 
 ## Run Jev independently
 
@@ -104,6 +113,24 @@ reproduction of that prompt. API outputs can vary.
 Results go to `results/chess-.../replay.html`. Default limit: 60 Jev calls; reaching
 it means unfinished (`*`), not a draw. Available repetition/50-move draw claims
 are automatically accepted for either side. API errors stop the game.
+
+## Experimental Jev-only review loop
+
+```bash
+.venv/bin/python chess_demo.py --policy deliberate --max-turns 40 --max-api-calls 200
+```
+
+Jev proposes all moves through a choice distribution. Its top three candidates
+are reviewed by three parallel Jev calls: material-loss risk, mate risk, quality,
+and a hypothetical Black reply. A final Jev call selects the move. If all three
+are rejected at risk ≥0.65, up to three more are reviewed within the budget.
+Usually 5 calls per White turn, at most 8. The threshold is experimental.
+
+No engine scores or programmatic tactical filter are used. Code only enumerates
+legal moves and constructs hypothetical boards. Every ranking and risk estimate
+comes from Jev. These are correlated judgments from the same model, not independent
+evidence of correctness. Full stage-by-stage traces and costs are retained.
+`--dry-run` shows only the proposal request; later requests depend on API answers.
 
 ## Archived assisted modes
 
@@ -148,7 +175,7 @@ Synthetic `--demo` answers are not model evaluations.
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-22 tests passed locally. Default-mode tests reject calls to tactical filters or
+26 chess/API tests passed locally. Default-mode tests reject calls to tactical filters or
 Stockfish. Recorded games were checked for legality, final results and PGN/JSON
 agreement. Optional real-Stockfish tests skip if the executable is unavailable.
 

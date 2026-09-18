@@ -1,0 +1,15 @@
+[Event "Jev demo"]
+[Site "?"]
+[Date "2026.09.18"]
+[Round "?"]
+[White "typesafe/jev-1.13"]
+[Black "Local material depth 2"]
+[Result "0-1"]
+[JevPolicy "deliberate"]
+[MaxAPICalls "200"]
+[PromptVersion "jev-deliberation-v1"]
+[CoachNodes "100000"]
+[OpponentNodes "15000"]
+[Termination "CHECKMATE"]
+
+1. Nf3 a5 2. Nc3 f5 3. d4 Kf7 4. e3 c6 5. Bc4+ d5 6. O-O dxc4 7. Ne5+ Kf6 8. Nxc4 Be6 9. Nd5+ Qxd5 10. Nxa5 Qxa5 11. Bd2 Qd8 12. Re1 Qd6 13. Bc3 g6 14. e4 fxe4 15. d5+ Kg5 16. Bxh8 cxd5 17. Rxe4 Bd7 18. Bf6+ Kxf6 19. Rxe7 Bxe7 20. Qxd5 Qxd5 21. Re1 Bd6 22. Re6+ Bxe6 23. c3 Qd1# 0-1

@@ -68,5 +68,19 @@
       "reported_cost_usd": 0.005277006000000001,
       "requests_with_cost": 60
     }
+  },
+  {
+    "slug": "06-jev-review-loop",
+    "title": "Jev: предложение, проверка, выбор",
+    "summary": {
+      "result": "0-1",
+      "reason": "CHECKMATE",
+      "plies": 46,
+      "api_requests": 115,
+      "input_tokens": 214165,
+      "output_tokens": 32060,
+      "reported_cost_usd": 0.008994929999999998,
+      "requests_with_cost": 115
+    }
   }
 ]

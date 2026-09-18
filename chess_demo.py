@@ -16,6 +16,7 @@ import chess.engine
 import jev
 from chess_safety import filter_moves
 from chess_coach import engine_path, engine_filter
+from chess_deliberation import deliberate, RequestBudgetExceeded
 
 VALUES = {chess.PAWN: 100, chess.KNIGHT: 320, chess.BISHOP: 330,
           chess.ROOK: 500, chess.QUEEN: 900, chess.KING: 0}
@@ -144,7 +145,8 @@ def save(folder, game, board, records, requests, reason, model, seed):
     svgs = [chess.svg.board(chess.Board(fen), lastmove=chess.Move.from_uci(records[i-1]['uci']) if i else None,
                             size=500) for i, fen in enumerate(positions)]
     labels = ['Начальная позиция'] + [f'{(r["ply"]+1)//2}{"." if r["ply"]%2 else "..."} {r["actor"]}: {r["san"]} ({r["uci"]}) — {r["elapsed_s"]:.2f} с'
-        + (f' | Фильтр исключил {r["safety"]["excluded_count"]} из {r["safety"]["legal_count"]} ходов' if r.get('safety') else '') for r in records]
+        + (f' | Фильтр исключил {r["safety"]["excluded_count"]} из {r["safety"]["legal_count"]} ходов' if r.get('safety') else '')
+        + (f' | Проверено кандидатов: {len(r["deliberation"]["reviews"])}; первый выбор: {r["deliberation"]["proposal_top"]}; итог: {r["uci"]}' if r.get('deliberation') else '') for r in records]
     packed = json.dumps(dict(boards=svgs, labels=labels), ensure_ascii=False).replace('<', '\\u003c')
     page = '''<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
 <title>Jev играет в шахматы</title><style>body{max-width:850px;margin:30px auto;padding:0 20px;font:17px system-ui;background:#f3f5f9;color:#17243b}#board{max-width:500px}button{padding:10px;margin:4px}input{width:100%}pre{white-space:pre-wrap}svg{width:100%;height:auto}</style>
@@ -164,18 +166,22 @@ document.getElementById('play').onclick=()=>{if(timer){stop();return;}if(i===dat
         start = page.index('<h1>')
         end = page.index('<div id="board">')
         page = page[:start] + '<h1>Jev + Stockfish — белые</h1><p>Соперник: ' + html.escape(game.headers['Black']) + '</p><p>Stockfish рассчитывает до пяти кандидатов. Jev выбирает среди ходов не хуже лучшего более чем на 0.4 пешки по текущему анализу. При перевесе фильтр предпочитает варианты без повторений. Основную шахматную силу обеспечивает движок; это не рейтинг Jev.</p>' + page[end:]
+    if game.headers.get('JevPolicy')=='deliberate':
+        page=page.replace('Jev получает позицию и все легальные ходы. Подсказок от движка нет.',
+                          'Jev получает все легальные ходы, предлагает три кандидата, сама проверяет потери и ответы соперника, затем выбирает ход. Обычно 5 запросов на ход, до 8 при повторной проверке. Stockfish и числовой оценщик не участвуют; все оценки риска принадлежат Jev.')
     (folder / 'replay.html').write_text(page, encoding='utf-8')
     return summary
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--max-turns', type=int, default=60, help='Maximum Jev turns/API calls')
+    parser.add_argument('--max-turns', type=int, default=60, help='Maximum White turns (deliberate uses multiple API calls per turn)')
+    parser.add_argument('--max-api-calls',type=int,default=300,help='Total request budget, including all reviews')
     parser.add_argument('--model', default='typesafe/jev-1.13')
     parser.add_argument('--seed', type=int, default=42)
     parser.add_argument('--out', type=Path)
     parser.add_argument('--dry-run', action='store_true')
-    parser.add_argument('--policy', choices=['raw', 'guarded', 'engine'], default=DEFAULT_POLICY,
+    parser.add_argument('--policy', choices=['raw', 'deliberate', 'guarded', 'engine'], default=DEFAULT_POLICY,
                         help='raw: Jev alone (default); guarded/engine: archived assisted experiments')
     parser.add_argument('--opponent', choices=['simple', 'stockfish'], default='simple')
     parser.add_argument('--skill', type=int, default=5, help='Stockfish opponent Skill Level, 0..20 (not Elo)')
@@ -185,6 +191,7 @@ def main():
     args = parser.parse_args()
     if not 1 <= args.max_turns <= 200:
         parser.error('--max-turns must be between 1 and 200')
+    if args.max_api_calls<1:parser.error('--max-api-calls must be positive')
     if not 0 <= args.skill <= 20 or args.coach_nodes <= 0 or args.opponent_nodes <= 0:
         parser.error('skill must be 0..20; node budgets must be positive')
     board = chess.Board()
@@ -204,14 +211,15 @@ def main():
     game = chess.pgn.Game()
     game.headers.update(Event='Jev demo', White=args.model, Black='Local material depth 2', Date=datetime.date.today().strftime('%Y.%m.%d'))
     game.headers['JevPolicy'] = args.policy
-    game.headers['PromptVersion'] = PURE_PROMPT_VERSION if args.policy == 'raw' else 'assisted-with-san-history'
+    game.headers['MaxAPICalls'] = str(args.max_api_calls)
+    game.headers['PromptVersion'] = ('jev-deliberation-v1' if args.policy=='deliberate' else PURE_PROMPT_VERSION if args.policy == 'raw' else 'assisted-with-san-history')
     game.headers['CoachNodes'] = str(args.coach_nodes)
     game.headers['OpponentNodes'] = str(args.opponent_nodes)
     node = game
     records, requests = [], []
     reason = 'running'
     coach = opponent = None
-    print(f'Лимит: {args.max_turns} запросов. Отчёт: {folder / "replay.html"}', flush=True)
+    print(f'Лимиты: {args.max_turns} ходов белых, {args.max_api_calls} API-запросов. Отчёт: {folder / "replay.html"}', flush=True)
     save(folder, game, board, records, requests, reason, args.model, args.seed)
     try:
         if args.policy == 'engine':
@@ -230,18 +238,23 @@ def main():
             start = time.monotonic()
             actor = 'Jev' if board.turn == chess.WHITE else 'Локальный бот'
             safety = None
+            deliberation = None
             if board.turn == chess.WHITE:
                 safety = engine_filter(board, coach, args.coach_nodes) if coach else (filter_moves(board) if args.policy == 'guarded' else None)
                 body = make_request(board, args.model, safety)
-                attempt = {'request': body, 'safety': safety}
-                requests.append(attempt)
-                response = jev.request(body, key, 45)
-                attempt['response'] = response
-                answer = response['answers'].get('move', {})
-                move_id = answer.get('choice')
-                if move_id not in body['questions']['move']['criteria']:
-                    raise ValueError('API returned a move outside the legal move list')
-                move = chess.Move.from_uci(move_id)
+                if args.policy=='deliberate':
+                    move,deliberation=deliberate(board,body,lambda b:jev.request(b,key,45),requests,args.max_api_calls)
+                else:
+                    if len(requests)>=args.max_api_calls:raise RequestBudgetExceeded('API request budget reached; unfinished')
+                    attempt = {'request': body, 'safety': safety}
+                    requests.append(attempt)
+                    response = jev.request(body, key, 45)
+                    attempt['response'] = response
+                    answer = response['answers'].get('move', {})
+                    move_id = answer.get('choice')
+                    if move_id not in body['questions']['move']['criteria']:
+                        raise ValueError('API returned a move outside the legal move list')
+                    move = chess.Move.from_uci(move_id)
             else:
                 move = opponent.play(board, chess.engine.Limit(nodes=args.opponent_nodes)).move if opponent else opponent_move(board, rng)
                 if opponent:
@@ -250,13 +263,15 @@ def main():
             board.push(move)
             node = node.add_variation(move)
             elapsed = time.monotonic() - start
-            records.append(dict(ply=ply+1, actor=actor, uci=move.uci(), san=san, fen_before=before, fen_after=board.fen(), elapsed_s=elapsed, safety=safety))
+            records.append(dict(ply=ply+1, actor=actor, uci=move.uci(), san=san, fen_before=before, fen_after=board.fen(), elapsed_s=elapsed, safety=safety,deliberation=deliberation))
             print(f'{ply+1:3}. {actor}: {san} [{move.uci()}], {elapsed:.2f} с', flush=True)
             save(folder, game, board, records, requests, reason, args.model, args.seed)
         outcome = board.outcome(claim_draw=True)
         reason = outcome.termination.name if outcome else 'move_limit; unfinished'
     except KeyboardInterrupt:
         reason = 'interrupted; unfinished'
+    except RequestBudgetExceeded:
+        reason='api_budget; unfinished'
     except Exception as exc:
         reason = 'error: ' + str(exc).replace(key, '[REDACTED]')
     finally:
