@@ -24,7 +24,8 @@ GAMES = [
 
 def public_copy(value):
     if isinstance(value, dict):
-        return {k: public_copy(v) for k, v in value.items() if k not in ('id',)}
+        return {k: public_copy(v) for k, v in value.items()
+                if not (k == 'id' and 'answers' in value)}
     if isinstance(value, list):
         return [public_copy(v) for v in value]
     return value
