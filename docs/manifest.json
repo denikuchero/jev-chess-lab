@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "01-raw",
+    "title": "Jev самостоятельно: первая партия",
+    "summary": {
+      "result": "0-1",
+      "reason": "CHECKMATE",
+      "plies": 96,
+      "api_requests": 48,
+      "input_tokens": 55985,
+      "output_tokens": 10120,
+      "reported_cost_usd": 0.002351370000000001,
+      "requests_with_cost": 48
+    }
+  },
+  {
+    "slug": "02-guarded",
+    "title": "Jev + локальный фильтр",
+    "summary": {
+      "result": "1/2-1/2",
+      "reason": "THREEFOLD_REPETITION",
+      "plies": 75,
+      "api_requests": 38,
+      "input_tokens": 58465,
+      "output_tokens": 8390,
+      "reported_cost_usd": 0.00245553,
+      "requests_with_cost": 38
+    }
+  },
+  {
+    "slug": "03-stockfish-assisted",
+    "title": "Jev + Stockfish: опыт с помощником",
+    "summary": {
+      "result": "1-0",
+      "reason": "CHECKMATE",
+      "plies": 75,
+      "api_requests": 38,
+      "input_tokens": 63194,
+      "output_tokens": 1522,
+      "reported_cost_usd": 0.002654148,
+      "requests_with_cost": 38
+    }
+  },
+  {
+    "slug": "04-pure-history",
+    "title": "Jev самостоятельно: история и инструкция",
+    "summary": {
+      "result": "0-1",
+      "reason": "CHECKMATE",
+      "plies": 34,
+      "api_requests": 17,
+      "input_tokens": 21875,
+      "output_tokens": 4690,
+      "reported_cost_usd": 0.0009187500000000001,
+      "requests_with_cost": 17
+    }
+  }
+]

@@ -1,0 +1,11 @@
+[Event "Jev demo"]
+[Site "?"]
+[Date "2026.09.18"]
+[Round "?"]
+[White "typesafe/jev-1.13"]
+[Black "Local material depth 2"]
+[Result "1/2-1/2"]
+[JevPolicy "guarded"]
+[Termination "THREEFOLD_REPETITION"]
+
+1. e4 a5 2. Nf3 f6 3. Nc3 d6 4. d4 e6 5. Bb5+ Kf7 6. O-O Ne7 7. d5 exd5 8. exd5 Ng8 9. Nd4 Be7 10. Qh5+ g6 11. Qf3 a4 12. Nxa4 Ra5 13. Qa3 f5 14. Qb4 Ra7 15. Bc4 Ke8 16. Ne6 Bxe6 17. dxe6 h5 18. Bb5+ Kf8 19. Bd3 Qc8 20. Qc4 b5 21. Qxb5 Rxa4 22. Qxa4 Qxe6 23. Qa8 f4 24. Qxb8+ Kg7 25. Qxc7 f3 26. gxf3 Nh6 27. Qc3+ Bf6 28. Qc7+ Kg8 29. Bxg6 Bxb2 30. Bxb2 Qxg6+ 31. Kh1 Rh7 32. Qc8+ Kf7 33. Qc7+ Kf8 34. Qc8+ Ke7 35. Qc7+ Ke8 36. Qc8+ Ke7 37. Qc7+ Ke8 38. Qc8+ 1/2-1/2

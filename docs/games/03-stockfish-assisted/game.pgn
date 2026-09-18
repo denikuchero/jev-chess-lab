@@ -1,0 +1,14 @@
+[Event "Jev demo"]
+[Site "?"]
+[Date "2026.09.18"]
+[Round "?"]
+[White "typesafe/jev-1.13"]
+[Black "Stockfish 14.1 Skill 5, 15000 nodes"]
+[Result "1-0"]
+[JevPolicy "engine"]
+[CoachNodes "100000"]
+[OpponentNodes "15000"]
+[Termination "CHECKMATE"]
+[Coach "Stockfish 14.1"]
+
+1. e4 c6 2. c4 d5 3. cxd5 Nf6 4. Qa4 Nfd7 5. Nc3 cxd5 6. exd5 g6 7. Nf3 a6 8. h4 h5 9. g3 Bh6 10. Bg2 O-O 11. Qb3 Nc5 12. Qc4 Ncd7 13. d4 Nb6 14. Qb3 Kg7 15. Bxh6+ Kxh6 16. Ng5 Kg7 17. O-O N8d7 18. d6 exd6 19. Qxf7+ Rxf7 20. Ne6+ Kh7 21. Nxd8 Rf6 22. Rfe1 Kh6 23. Ne4 Rf8 24. Ne6 Nc5 25. N6xc5 dxc5 26. dxc5 Be6 27. cxb6 Bg8 28. Rec1 Rac8 29. b3 Bd5 30. Ng5 Bxg2 31. Kxg2 Rfe8 32. Rc7 Rxc7 33. bxc7 b5 34. Rd1 Re7 35. c8=Q Kg7 36. Qc3+ Re5 37. Qxe5+ Kf8 38. Rd8# 1-0

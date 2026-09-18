@@ -1,0 +1,106 @@
+{
+  "kind": "engine",
+  "engine": {
+    "name": "Stockfish 14.1",
+    "author": "the Stockfish developers (see AUTHORS file)"
+  },
+  "nodes_budget": 100000,
+  "candidates": [
+    {
+      "uci": "f1e1",
+      "san": "Rfe1+",
+      "score_cp": 99996,
+      "mate_in": 4,
+      "depth": 10,
+      "pv": [
+        "f1e1",
+        "g6e4",
+        "e1e4",
+        "e8f8",
+        "c7b8",
+        "f8f7",
+        "b8e8"
+      ],
+      "repeats_position": false,
+      "opponent_can_claim_draw": false,
+      "automatic_draw": false
+    },
+    {
+      "uci": "a1e1",
+      "san": "Rae1+",
+      "score_cp": 99996,
+      "mate_in": 4,
+      "depth": 10,
+      "pv": [
+        "a1e1",
+        "g6e4",
+        "e1e4",
+        "e8f8",
+        "c7b8",
+        "f8f7",
+        "b8e8"
+      ],
+      "repeats_position": false,
+      "opponent_can_claim_draw": false,
+      "automatic_draw": false
+    },
+    {
+      "uci": "c7c6",
+      "san": "Qc6+",
+      "score_cp": 1253,
+      "mate_in": null,
+      "depth": 10,
+      "pv": [
+        "c7c6",
+        "e8d8",
+        "f1g1",
+        "g6f7",
+        "a1e1"
+      ],
+      "repeats_position": false,
+      "opponent_can_claim_draw": false,
+      "automatic_draw": false
+    },
+    {
+      "uci": "c7b8",
+      "san": "Qb8+",
+      "score_cp": 1138,
+      "mate_in": null,
+      "depth": 10,
+      "pv": [
+        "c7b8",
+        "e8d7"
+      ],
+      "repeats_position": false,
+      "opponent_can_claim_draw": false,
+      "automatic_draw": false
+    },
+    {
+      "uci": "b2g7",
+      "san": "Bg7",
+      "score_cp": 1139,
+      "mate_in": null,
+      "depth": 9,
+      "pv": [
+        "b2g7",
+        "h7g7",
+        "f1e1",
+        "e8f8",
+        "c7d8",
+        "f8f7",
+        "e1e7",
+        "f7f6"
+      ],
+      "repeats_position": false,
+      "opponent_can_claim_draw": false,
+      "automatic_draw": false
+    }
+  ],
+  "offered": [
+    "f1e1",
+    "a1e1"
+  ],
+  "reason": "near_best_engine_moves; avoid_repetition_while_winning",
+  "legal_count": 41,
+  "excluded_count": 39
+}

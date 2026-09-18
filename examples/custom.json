@@ -1,0 +1,11 @@
+{
+  "state": "Оплатил заказ два раза. Верните лишнее списание, пожалуйста.",
+  "questions": {
+    "needs_refund": {
+      "type": "noul",
+      "instructions": "Просит ли клиент вернуть деньги?",
+      "criteria": {"true": "Просит возврат", "false": "Не просит возврат"}
+    }
+  },
+  "expected": {"needs_refund": true}
+}

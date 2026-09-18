@@ -1,0 +1,14 @@
+Jev Chess Lab
+Copyright (C) 2026 denikuchero
+
+Project source is released under GPL-3.0-or-later; see LICENSE.
+Recorded chess traces and rendered replays are published with this project.
+
+Dependencies are installed separately, not vendored:
+- python-chess / chess: GPL-3.0-or-later; https://github.com/niklasf/python-chess
+- Stockfish: GPL-3.0; https://github.com/official-stockfish/Stockfish
+- Pillow, CairoSVG and FFmpeg retain their upstream licenses.
+
+This is an independent experiment, not an official TypeSafe, OpenRouter,
+Stockfish or python-chess project. Model/API access is subject to provider terms.
+No API credentials or Stockfish executable are distributed.

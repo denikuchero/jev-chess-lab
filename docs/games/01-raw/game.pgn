@@ -1,0 +1,10 @@
+[Event "Jev demo"]
+[Site "?"]
+[Date "2026.09.18"]
+[Round "?"]
+[White "typesafe/jev-1.13"]
+[Black "Local material depth 2"]
+[Result "0-1"]
+[Termination "CHECKMATE"]
+
+1. e4 a5 2. Nf3 f6 3. d4 d6 4. Nc3 e6 5. Nd5 exd5 6. exd5 f5 7. Bb5+ Ke7 8. O-O h5 9. Bg5+ Nf6 10. Bxf6+ Kxf6 11. Ne5 dxe5 12. dxe5+ Kxe5 13. Qxh5 Rxh5 14. Rae1+ Kxd5 15. Rd1+ Ke6 16. Rxd8 Rg5 17. Rxf8 Ke5 18. Rxf5+ Bxf5 19. Re1+ Kd4 20. Rd1+ Ke4 21. Rd4+ Kxd4 22. c3+ Kd5 23. c4+ Ke4 24. Bc6+ bxc6 25. f3+ Kd3 26. c5 Ra6 27. Kf1 Ke3 28. f4 Kxf4 29. g3+ Kg4 30. h3+ Kxg3 31. h4 Kxh4 32. Ke1 Bc2 33. Kd2 Rxc5 34. Ke3 Re5+ 35. Kd4 Rg5 36. Kc3 Be4 37. Kd4 Bg6 38. Kc3 Rd5 39. Kc4 a4 40. Kb4 Rb5+ 41. Ka3 Bh7 42. b4 axb3+ 43. Kb2 bxa2+ 44. Kc3 a1=Q+ 45. Kd2 Rbb6 46. Ke3 Rb2 47. Kd4 Rb3+ 48. Kc5 Qc3# 0-1

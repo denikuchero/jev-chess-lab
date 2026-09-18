@@ -1,0 +1,2517 @@
+{
+  "model": "typesafe/jev-1.13",
+  "seed": 42,
+  "policy": "raw",
+  "opponent": "Local material depth 2",
+  "settings": {
+    "Event": "Jev demo",
+    "Site": "?",
+    "Date": "2026.09.18",
+    "Round": "?",
+    "White": "typesafe/jev-1.13",
+    "Black": "Local material depth 2",
+    "Result": "0-1",
+    "JevPolicy": "raw",
+    "PromptVersion": "pure-v2-history",
+    "CoachNodes": "100000",
+    "OpponentNodes": "15000",
+    "Termination": "CHECKMATE"
+  },
+  "summary": {
+    "result": "0-1",
+    "reason": "CHECKMATE",
+    "plies": 34,
+    "api_requests": 17,
+    "input_tokens": 21875,
+    "output_tokens": 4690,
+    "reported_cost_usd": 0.0009187500000000001,
+    "requests_with_cost": 17
+  },
+  "moves": [
+    {
+      "ply": 1,
+      "actor": "Jev",
+      "uci": "e2e4",
+      "san": "e4",
+      "fen_before": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "fen_after": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",
+      "elapsed_s": 1.5414217279758304,
+      "safety": null
+    },
+    {
+      "ply": 2,
+      "actor": "Локальный бот",
+      "uci": "a7a5",
+      "san": "a5",
+      "fen_before": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",
+      "fen_after": "rnbqkbnr/1ppppppp/8/p7/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+      "elapsed_s": 0.1520183279644698,
+      "safety": null
+    },
+    {
+      "ply": 3,
+      "actor": "Jev",
+      "uci": "g1f3",
+      "san": "Nf3",
+      "fen_before": "rnbqkbnr/1ppppppp/8/p7/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+      "fen_after": "rnbqkbnr/1ppppppp/8/p7/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2",
+      "elapsed_s": 1.4513052080292255,
+      "safety": null
+    },
+    {
+      "ply": 4,
+      "actor": "Локальный бот",
+      "uci": "f7f6",
+      "san": "f6",
+      "fen_before": "rnbqkbnr/1ppppppp/8/p7/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2",
+      "fen_after": "rnbqkbnr/1pppp1pp/5p2/p7/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 0 3",
+      "elapsed_s": 0.14887339598499238,
+      "safety": null
+    },
+    {
+      "ply": 5,
+      "actor": "Jev",
+      "uci": "b1c3",
+      "san": "Nc3",
+      "fen_before": "rnbqkbnr/1pppp1pp/5p2/p7/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 0 3",
+      "fen_after": "rnbqkbnr/1pppp1pp/5p2/p7/4P3/2N2N2/PPPP1PPP/R1BQKB1R b KQkq - 1 3",
+      "elapsed_s": 1.4066047569504008,
+      "safety": null
+    },
+    {
+      "ply": 6,
+      "actor": "Локальный бот",
+      "uci": "d7d6",
+      "san": "d6",
+      "fen_before": "rnbqkbnr/1pppp1pp/5p2/p7/4P3/2N2N2/PPPP1PPP/R1BQKB1R b KQkq - 1 3",
+      "fen_after": "rnbqkbnr/1pp1p1pp/3p1p2/p7/4P3/2N2N2/PPPP1PPP/R1BQKB1R w KQkq - 0 4",
+      "elapsed_s": 0.14721904997713864,
+      "safety": null
+    },
+    {
+      "ply": 7,
+      "actor": "Jev",
+      "uci": "f1b5",
+      "san": "Bb5+",
+      "fen_before": "rnbqkbnr/1pp1p1pp/3p1p2/p7/4P3/2N2N2/PPPP1PPP/R1BQKB1R w KQkq - 0 4",
+      "fen_after": "rnbqkbnr/1pp1p1pp/3p1p2/pB6/4P3/2N2N2/PPPP1PPP/R1BQK2R b KQkq - 1 4",
+      "elapsed_s": 1.7382616600953043,
+      "safety": null
+    },
+    {
+      "ply": 8,
+      "actor": "Локальный бот",
+      "uci": "e8f7",
+      "san": "Kf7",
+      "fen_before": "rnbqkbnr/1pp1p1pp/3p1p2/pB6/4P3/2N2N2/PPPP1PPP/R1BQK2R b KQkq - 1 4",
+      "fen_after": "rnbq1bnr/1pp1pkpp/3p1p2/pB6/4P3/2N2N2/PPPP1PPP/R1BQK2R w KQ - 2 5",
+      "elapsed_s": 0.05309152707923204,
+      "safety": null
+    },
+    {
+      "ply": 9,
+      "actor": "Jev",
+      "uci": "f3e5",
+      "san": "Ne5+",
+      "fen_before": "rnbq1bnr/1pp1pkpp/3p1p2/pB6/4P3/2N2N2/PPPP1PPP/R1BQK2R w KQ - 2 5",
+      "fen_after": "rnbq1bnr/1pp1pkpp/3p1p2/pB2N3/4P3/2N5/PPPP1PPP/R1BQK2R b KQ - 3 5",
+      "elapsed_s": 1.377299790037796,
+      "safety": null
+    },
+    {
+      "ply": 10,
+      "actor": "Локальный бот",
+      "uci": "d6e5",
+      "san": "dxe5",
+      "fen_before": "rnbq1bnr/1pp1pkpp/3p1p2/pB2N3/4P3/2N5/PPPP1PPP/R1BQK2R b KQ - 3 5",
+      "fen_after": "rnbq1bnr/1pp1pkpp/5p2/pB2p3/4P3/2N5/PPPP1PPP/R1BQK2R w KQ - 0 6",
+      "elapsed_s": 0.029885699041187763,
+      "safety": null
+    },
+    {
+      "ply": 11,
+      "actor": "Jev",
+      "uci": "b5e8",
+      "san": "Be8+",
+      "fen_before": "rnbq1bnr/1pp1pkpp/5p2/pB2p3/4P3/2N5/PPPP1PPP/R1BQK2R w KQ - 0 6",
+      "fen_after": "rnbqBbnr/1pp1pkpp/5p2/p3p3/4P3/2N5/PPPP1PPP/R1BQK2R b KQ - 1 6",
+      "elapsed_s": 2.077119947061874,
+      "safety": null
+    },
+    {
+      "ply": 12,
+      "actor": "Локальный бот",
+      "uci": "d8e8",
+      "san": "Qxe8",
+      "fen_before": "rnbqBbnr/1pp1pkpp/5p2/p3p3/4P3/2N5/PPPP1PPP/R1BQK2R b KQ - 1 6",
+      "fen_after": "rnb1qbnr/1pp1pkpp/5p2/p3p3/4P3/2N5/PPPP1PPP/R1BQK2R w KQ - 0 7",
+      "elapsed_s": 0.02434882300440222,
+      "safety": null
+    },
+    {
+      "ply": 13,
+      "actor": "Jev",
+      "uci": "d1h5",
+      "san": "Qh5+",
+      "fen_before": "rnb1qbnr/1pp1pkpp/5p2/p3p3/4P3/2N5/PPPP1PPP/R1BQK2R w KQ - 0 7",
+      "fen_after": "rnb1qbnr/1pp1pkpp/5p2/p3p2Q/4P3/2N5/PPPP1PPP/R1B1K2R b KQ - 1 7",
+      "elapsed_s": 1.4033732759999111,
+      "safety": null
+    },
+    {
+      "ply": 14,
+      "actor": "Локальный бот",
+      "uci": "g7g6",
+      "san": "g6",
+      "fen_before": "rnb1qbnr/1pp1pkpp/5p2/p3p2Q/4P3/2N5/PPPP1PPP/R1B1K2R b KQ - 1 7",
+      "fen_after": "rnb1qbnr/1pp1pk1p/5pp1/p3p2Q/4P3/2N5/PPPP1PPP/R1B1K2R w KQ - 0 8",
+      "elapsed_s": 0.020781283965334296,
+      "safety": null
+    },
+    {
+      "ply": 15,
+      "actor": "Jev",
+      "uci": "h5g6",
+      "san": "Qxg6+",
+      "fen_before": "rnb1qbnr/1pp1pk1p/5pp1/p3p2Q/4P3/2N5/PPPP1PPP/R1B1K2R w KQ - 0 8",
+      "fen_after": "rnb1qbnr/1pp1pk1p/5pQ1/p3p3/4P3/2N5/PPPP1PPP/R1B1K2R b KQ - 0 8",
+      "elapsed_s": 1.3584229110274464,
+      "safety": null
+    },
+    {
+      "ply": 16,
+      "actor": "Локальный бот",
+      "uci": "f7g6",
+      "san": "Kxg6",
+      "fen_before": "rnb1qbnr/1pp1pk1p/5pQ1/p3p3/4P3/2N5/PPPP1PPP/R1B1K2R b KQ - 0 8",
+      "fen_after": "rnb1qbnr/1pp1p2p/5pk1/p3p3/4P3/2N5/PPPP1PPP/R1B1K2R w KQ - 0 9",
+      "elapsed_s": 0.02548362093511969,
+      "safety": null
+    },
+    {
+      "ply": 17,
+      "actor": "Jev",
+      "uci": "e1g1",
+      "san": "O-O",
+      "fen_before": "rnb1qbnr/1pp1p2p/5pk1/p3p3/4P3/2N5/PPPP1PPP/R1B1K2R w KQ - 0 9",
+      "fen_after": "rnb1qbnr/1pp1p2p/5pk1/p3p3/4P3/2N5/PPPP1PPP/R1B2RK1 b - - 1 9",
+      "elapsed_s": 1.3418905229773372,
+      "safety": null
+    },
+    {
+      "ply": 18,
+      "actor": "Локальный бот",
+      "uci": "c8g4",
+      "san": "Bg4",
+      "fen_before": "rnb1qbnr/1pp1p2p/5pk1/p3p3/4P3/2N5/PPPP1PPP/R1B2RK1 b - - 1 9",
+      "fen_after": "rn2qbnr/1pp1p2p/5pk1/p3p3/4P1b1/2N5/PPPP1PPP/R1B2RK1 w - - 2 10",
+      "elapsed_s": 0.24067008798010647,
+      "safety": null
+    },
+    {
+      "ply": 19,
+      "actor": "Jev",
+      "uci": "c3d5",
+      "san": "Nd5",
+      "fen_before": "rn2qbnr/1pp1p2p/5pk1/p3p3/4P1b1/2N5/PPPP1PPP/R1B2RK1 w - - 2 10",
+      "fen_after": "rn2qbnr/1pp1p2p/5pk1/p2Np3/4P1b1/8/PPPP1PPP/R1B2RK1 b - - 3 10",
+      "elapsed_s": 1.5795715949498117,
+      "safety": null
+    },
+    {
+      "ply": 20,
+      "actor": "Локальный бот",
+      "uci": "g4d7",
+      "san": "Bd7",
+      "fen_before": "rn2qbnr/1pp1p2p/5pk1/p2Np3/4P1b1/8/PPPP1PPP/R1B2RK1 b - - 3 10",
+      "fen_after": "rn2qbnr/1ppbp2p/5pk1/p2Np3/4P3/8/PPPP1PPP/R1B2RK1 w - - 4 11",
+      "elapsed_s": 0.3773208319908008,
+      "safety": null
+    },
+    {
+      "ply": 21,
+      "actor": "Jev",
+      "uci": "d5e7",
+      "san": "Nxe7+",
+      "fen_before": "rn2qbnr/1ppbp2p/5pk1/p2Np3/4P3/8/PPPP1PPP/R1B2RK1 w - - 4 11",
+      "fen_after": "rn2qbnr/1ppbN2p/5pk1/p3p3/4P3/8/PPPP1PPP/R1B2RK1 b - - 0 11",
+      "elapsed_s": 1.8131067979848012,
+      "safety": null
+    },
+    {
+      "ply": 22,
+      "actor": "Локальный бот",
+      "uci": "e8e7",
+      "san": "Qxe7",
+      "fen_before": "rn2qbnr/1ppbN2p/5pk1/p3p3/4P3/8/PPPP1PPP/R1B2RK1 b - - 0 11",
+      "fen_after": "rn3bnr/1ppbq2p/5pk1/p3p3/4P3/8/PPPP1PPP/R1B2RK1 w - - 0 12",
+      "elapsed_s": 0.05950257298536599,
+      "safety": null
+    },
+    {
+      "ply": 23,
+      "actor": "Jev",
+      "uci": "f1d1",
+      "san": "Rd1",
+      "fen_before": "rn3bnr/1ppbq2p/5pk1/p3p3/4P3/8/PPPP1PPP/R1B2RK1 w - - 0 12",
+      "fen_after": "rn3bnr/1ppbq2p/5pk1/p3p3/4P3/8/PPPP1PPP/R1BR2K1 b - - 1 12",
+      "elapsed_s": 1.3962912630522624,
+      "safety": null
+    },
+    {
+      "ply": 24,
+      "actor": "Локальный бот",
+      "uci": "f8h6",
+      "san": "Bh6",
+      "fen_before": "rn3bnr/1ppbq2p/5pk1/p3p3/4P3/8/PPPP1PPP/R1BR2K1 b - - 1 12",
+      "fen_after": "rn4nr/1ppbq2p/5pkb/p3p3/4P3/8/PPPP1PPP/R1BR2K1 w - - 2 13",
+      "elapsed_s": 0.25592630996834487,
+      "safety": null
+    },
+    {
+      "ply": 25,
+      "actor": "Jev",
+      "uci": "d2d4",
+      "san": "d4",
+      "fen_before": "rn4nr/1ppbq2p/5pkb/p3p3/4P3/8/PPPP1PPP/R1BR2K1 w - - 2 13",
+      "fen_after": "rn4nr/1ppbq2p/5pkb/p3p3/3PP3/8/PPP2PPP/R1BR2K1 b - - 0 13",
+      "elapsed_s": 1.4408096660627052,
+      "safety": null
+    },
+    {
+      "ply": 26,
+      "actor": "Локальный бот",
+      "uci": "h6c1",
+      "san": "Bxc1",
+      "fen_before": "rn4nr/1ppbq2p/5pkb/p3p3/3PP3/8/PPP2PPP/R1BR2K1 b - - 0 13",
+      "fen_after": "rn4nr/1ppbq2p/5pk1/p3p3/3PP3/8/PPP2PPP/R1bR2K1 w - - 0 14",
+      "elapsed_s": 0.39000512997154146,
+      "safety": null
+    },
+    {
+      "ply": 27,
+      "actor": "Jev",
+      "uci": "d1c1",
+      "san": "Rdxc1",
+      "fen_before": "rn4nr/1ppbq2p/5pk1/p3p3/3PP3/8/PPP2PPP/R1bR2K1 w - - 0 14",
+      "fen_after": "rn4nr/1ppbq2p/5pk1/p3p3/3PP3/8/PPP2PPP/R1R3K1 b - - 0 14",
+      "elapsed_s": 1.626640604925342,
+      "safety": null
+    },
+    {
+      "ply": 28,
+      "actor": "Локальный бот",
+      "uci": "e5d4",
+      "san": "exd4",
+      "fen_before": "rn4nr/1ppbq2p/5pk1/p3p3/3PP3/8/PPP2PPP/R1R3K1 b - - 0 14",
+      "fen_after": "rn4nr/1ppbq2p/5pk1/p7/3pP3/8/PPP2PPP/R1R3K1 w - - 0 15",
+      "elapsed_s": 0.289368076948449,
+      "safety": null
+    },
+    {
+      "ply": 29,
+      "actor": "Jev",
+      "uci": "c1d1",
+      "san": "Rd1",
+      "fen_before": "rn4nr/1ppbq2p/5pk1/p7/3pP3/8/PPP2PPP/R1R3K1 w - - 0 15",
+      "fen_after": "rn4nr/1ppbq2p/5pk1/p7/3pP3/8/PPP2PPP/R2R2K1 b - - 1 15",
+      "elapsed_s": 1.9145382440183312,
+      "safety": null
+    },
+    {
+      "ply": 30,
+      "actor": "Локальный бот",
+      "uci": "e7e4",
+      "san": "Qxe4",
+      "fen_before": "rn4nr/1ppbq2p/5pk1/p7/3pP3/8/PPP2PPP/R2R2K1 b - - 1 15",
+      "fen_after": "rn4nr/1ppb3p/5pk1/p7/3pq3/8/PPP2PPP/R2R2K1 w - - 0 16",
+      "elapsed_s": 0.36052792391274124,
+      "safety": null
+    },
+    {
+      "ply": 31,
+      "actor": "Jev",
+      "uci": "d1d4",
+      "san": "Rxd4",
+      "fen_before": "rn4nr/1ppb3p/5pk1/p7/3pq3/8/PPP2PPP/R2R2K1 w - - 0 16",
+      "fen_after": "rn4nr/1ppb3p/5pk1/p7/3Rq3/8/PPP2PPP/R5K1 b - - 0 16",
+      "elapsed_s": 1.3734116300474852,
+      "safety": null
+    },
+    {
+      "ply": 32,
+      "actor": "Локальный бот",
+      "uci": "e4d4",
+      "san": "Qxd4",
+      "fen_before": "rn4nr/1ppb3p/5pk1/p7/3Rq3/8/PPP2PPP/R5K1 b - - 0 16",
+      "fen_after": "rn4nr/1ppb3p/5pk1/p7/3q4/8/PPP2PPP/R5K1 w - - 0 17",
+      "elapsed_s": 0.5509719910332933,
+      "safety": null
+    },
+    {
+      "ply": 33,
+      "actor": "Jev",
+      "uci": "a1d1",
+      "san": "Rd1",
+      "fen_before": "rn4nr/1ppb3p/5pk1/p7/3q4/8/PPP2PPP/R5K1 w - - 0 17",
+      "fen_after": "rn4nr/1ppb3p/5pk1/p7/3q4/8/PPP2PPP/3R2K1 b - - 1 17",
+      "elapsed_s": 1.4536955140065402,
+      "safety": null
+    },
+    {
+      "ply": 34,
+      "actor": "Локальный бот",
+      "uci": "d4d1",
+      "san": "Qxd1#",
+      "fen_before": "rn4nr/1ppb3p/5pk1/p7/3q4/8/PPP2PPP/3R2K1 b - - 1 17",
+      "fen_after": "rn4nr/1ppb3p/5pk1/p7/8/8/PPP2PPP/3q2K1 w - - 0 18",
+      "elapsed_s": 0.43345000594854355,
+      "safety": null
+    }
+  ],
+  "requests": [
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+          "board": "8 r n b q k b n r\n7 p p p p p p p p\n6 . . . . . . . .\n5 . . . . . . . .\n4 . . . . . . . .\n3 . . . . . . . .\n2 P P P P P P P P\n1 R N B Q K B N R\n  a b c d e f g h",
+          "legend": "Uppercase = White, lowercase = Black. P pawn, N knight, B bishop, R rook, Q queen, K king; . empty.",
+          "you_play": "White",
+          "in_check": false,
+          "history_uci": [],
+          "history_san": []
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Play standard chess as White. Choose the strongest legal move to win. Consider opponent replies, hanging pieces, threats, king safety and checkmate. Keys are UCI from-square/to-square (optional promotion), descriptions are SAN. Choose exactly one offered move. You are the sole decision maker: no move has been ranked or filtered for strength. Independently examine opponent checks, captures and threats after your proposed move, including attacks on other pieces. A check or capture is not automatically good. A defended queen can still lose material against a cheaper attacker; assess the full exchange. Develop pieces and coordinate them, protect your king, and convert advantages into checkmate. Use both complete move histories to recognize unproductive repeated maneuvers; avoid repeating positions when you judge that you can win, but consider a draw when losing. These are general instructions, not tactical hints for this position.",
+            "criteria": {
+              "a2a3": "a3",
+              "a2a4": "a4",
+              "b1a3": "Na3",
+              "b1c3": "Nc3",
+              "b2b3": "b3",
+              "b2b4": "b4",
+              "c2c3": "c3",
+              "c2c4": "c4",
+              "d2d3": "d3",
+              "d2d4": "d4",
+              "e2e3": "e3",
+              "e2e4": "e4",
+              "f2f3": "f3",
+              "f2f4": "f4",
+              "g1f3": "Nf3",
+              "g1h3": "Nh3",
+              "g2g3": "g3",
+              "g2g4": "g4",
+              "h2h3": "h3",
+              "h2h4": "h4"
+            }
+          }
+        }
+      },
+      "safety": null,
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "move": {
+            "type": "choice",
+            "choice": "e2e4",
+            "probabilities": {
+              "g1f3": 0.04,
+              "c2c4": 0,
+              "b2b4": 0,
+              "a2a3": 0,
+              "h2h4": 0,
+              "f2f4": 0,
+              "d2d3": 0,
+              "g1h3": 0,
+              "b1c3": 0.03,
+              "c2c3": 0,
+              "g2g3": 0,
+              "b1a3": 0,
+              "d2d4": 0.06999999999999999,
+              "e2e3": 0,
+              "f2f3": 0,
+              "a2a4": 0,
+              "h2h3": 0,
+              "b2b3": 0,
+              "e2e4": 0.86,
+              "g2g4": 0
+            },
+            "confidence": 0.84
+          }
+        },
+        "usage": {
+          "input_tokens": 989,
+          "output_tokens": 220,
+          "cost": 4.1538e-05
+        },
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "fen": "rnbqkbnr/1ppppppp/8/p7/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+          "board": "8 r n b q k b n r\n7 . p p p p p p p\n6 . . . . . . . .\n5 p . . . . . . .\n4 . . . . P . . .\n3 . . . . . . . .\n2 P P P P . P P P\n1 R N B Q K B N R\n  a b c d e f g h",
+          "legend": "Uppercase = White, lowercase = Black. P pawn, N knight, B bishop, R rook, Q queen, K king; . empty.",
+          "you_play": "White",
+          "in_check": false,
+          "history_uci": [
+            "e2e4",
+            "a7a5"
+          ],
+          "history_san": [
+            "e4",
+            "a5"
+          ]
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Play standard chess as White. Choose the strongest legal move to win. Consider opponent replies, hanging pieces, threats, king safety and checkmate. Keys are UCI from-square/to-square (optional promotion), descriptions are SAN. Choose exactly one offered move. You are the sole decision maker: no move has been ranked or filtered for strength. Independently examine opponent checks, captures and threats after your proposed move, including attacks on other pieces. A check or capture is not automatically good. A defended queen can still lose material against a cheaper attacker; assess the full exchange. Develop pieces and coordinate them, protect your king, and convert advantages into checkmate. Use both complete move histories to recognize unproductive repeated maneuvers; avoid repeating positions when you judge that you can win, but consider a draw when losing. These are general instructions, not tactical hints for this position.",
+            "criteria": {
+              "a2a3": "a3",
+              "a2a4": "a4",
+              "b1a3": "Na3",
+              "b1c3": "Nc3",
+              "b2b3": "b3",
+              "b2b4": "b4",
+              "c2c3": "c3",
+              "c2c4": "c4",
+              "d1e2": "Qe2",
+              "d1f3": "Qf3",
+              "d1g4": "Qg4",
+              "d1h5": "Qh5",
+              "d2d3": "d3",
+              "d2d4": "d4",
+              "e1e2": "Ke2",
+              "e4e5": "e5",
+              "f1a6": "Ba6",
+              "f1b5": "Bb5",
+              "f1c4": "Bc4",
+              "f1d3": "Bd3",
+              "f1e2": "Be2",
+              "f2f3": "f3",
+              "f2f4": "f4",
+              "g1e2": "Ne2",
+              "g1f3": "Nf3",
+              "g1h3": "Nh3",
+              "g2g3": "g3",
+              "g2g4": "g4",
+              "h2h3": "h3",
+              "h2h4": "h4"
+            }
+          }
+        }
+      },
+      "safety": null,
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "move": {
+            "type": "choice",
+            "choice": "g1f3",
+            "probabilities": {
+              "f1b5": 0.03,
+              "b2b4": 0.07,
+              "f1d3": 0.01,
+              "h2h4": 0,
+              "a2a3": 0.02,
+              "f1a6": 0.02,
+              "f2f4": 0.01,
+              "d2d3": 0,
+              "g1h3": 0,
+              "c2c3": 0.01,
+              "f1c4": 0.02,
+              "b1a3": 0.01,
+              "d2d4": 0.03,
+              "f1e2": 0,
+              "b2b3": 0.01,
+              "g1f3": 0.47,
+              "c2c4": 0.02,
+              "e1e2": 0,
+              "d1h5": 0.02,
+              "b1c3": 0.15,
+              "g1e2": 0,
+              "e4e5": 0.01,
+              "f2f3": 0.01,
+              "g2g3": 0,
+              "d1f3": 0.01,
+              "d1e2": 0,
+              "d1g4": 0.01,
+              "a2a4": 0.06,
+              "h2h3": 0,
+              "g2g4": 0
+            },
+            "confidence": 0.46
+          }
+        },
+        "usage": {
+          "input_tokens": 1177,
+          "output_tokens": 320,
+          "cost": 4.9434e-05
+        },
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "fen": "rnbqkbnr/1pppp1pp/5p2/p7/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 0 3",
+          "board": "8 r n b q k b n r\n7 . p p p p . p p\n6 . . . . . p . .\n5 p . . . . . . .\n4 . . . . P . . .\n3 . . . . . N . .\n2 P P P P . P P P\n1 R N B Q K B . R\n  a b c d e f g h",
+          "legend": "Uppercase = White, lowercase = Black. P pawn, N knight, B bishop, R rook, Q queen, K king; . empty.",
+          "you_play": "White",
+          "in_check": false,
+          "history_uci": [
+            "e2e4",
+            "a7a5",
+            "g1f3",
+            "f7f6"
+          ],
+          "history_san": [
+            "e4",
+            "a5",
+            "Nf3",
+            "f6"
+          ]
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Play standard chess as White. Choose the strongest legal move to win. Consider opponent replies, hanging pieces, threats, king safety and checkmate. Keys are UCI from-square/to-square (optional promotion), descriptions are SAN. Choose exactly one offered move. You are the sole decision maker: no move has been ranked or filtered for strength. Independently examine opponent checks, captures and threats after your proposed move, including attacks on other pieces. A check or capture is not automatically good. A defended queen can still lose material against a cheaper attacker; assess the full exchange. Develop pieces and coordinate them, protect your king, and convert advantages into checkmate. Use both complete move histories to recognize unproductive repeated maneuvers; avoid repeating positions when you judge that you can win, but consider a draw when losing. These are general instructions, not tactical hints for this position.",
+            "criteria": {
+              "a2a3": "a3",
+              "a2a4": "a4",
+              "b1a3": "Na3",
+              "b1c3": "Nc3",
+              "b2b3": "b3",
+              "b2b4": "b4",
+              "c2c3": "c3",
+              "c2c4": "c4",
+              "d1e2": "Qe2",
+              "d2d3": "d3",
+              "d2d4": "d4",
+              "e1e2": "Ke2",
+              "e4e5": "e5",
+              "f1a6": "Ba6",
+              "f1b5": "Bb5",
+              "f1c4": "Bc4",
+              "f1d3": "Bd3",
+              "f1e2": "Be2",
+              "f3d4": "Nd4",
+              "f3e5": "Ne5",
+              "f3g1": "Ng1",
+              "f3g5": "Ng5",
+              "f3h4": "Nh4",
+              "g2g3": "g3",
+              "g2g4": "g4",
+              "h1g1": "Rg1",
+              "h2h3": "h3",
+              "h2h4": "h4"
+            }
+          }
+        }
+      },
+      "safety": null,
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "move": {
+            "type": "choice",
+            "choice": "b1c3",
+            "probabilities": {
+              "a2a4": 0.01,
+              "e1e2": 0,
+              "f1c4": 0.03,
+              "b1c3": 0.32,
+              "b2b3": 0,
+              "f3g1": 0,
+              "h2h3": 0,
+              "f3e5": 0.11,
+              "f3g5": 0.04,
+              "g2g4": 0,
+              "f1a6": 0.02,
+              "g2g3": 0,
+              "a2a3": 0.01,
+              "f3d4": 0.04,
+              "f3h4": 0.01,
+              "b2b4": 0.01,
+              "f1e2": 0.01,
+              "d2d3": 0.01,
+              "h1g1": 0,
+              "b1a3": 0.01,
+              "c2c4": 0.03,
+              "e4e5": 0.07,
+              "f1b5": 0.05,
+              "f1d3": 0.02,
+              "h2h4": 0,
+              "d1e2": 0,
+              "d2d4": 0.19,
+              "c2c3": 0.01
+            },
+            "confidence": 0.29
+          }
+        },
+        "usage": {
+          "input_tokens": 1171,
+          "output_tokens": 300,
+          "cost": 4.9182e-05
+        },
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "fen": "rnbqkbnr/1pp1p1pp/3p1p2/p7/4P3/2N2N2/PPPP1PPP/R1BQKB1R w KQkq - 0 4",
+          "board": "8 r n b q k b n r\n7 . p p . p . p p\n6 . . . p . p . .\n5 p . . . . . . .\n4 . . . . P . . .\n3 . . N . . N . .\n2 P P P P . P P P\n1 R . B Q K B . R\n  a b c d e f g h",
+          "legend": "Uppercase = White, lowercase = Black. P pawn, N knight, B bishop, R rook, Q queen, K king; . empty.",
+          "you_play": "White",
+          "in_check": false,
+          "history_uci": [
+            "e2e4",
+            "a7a5",
+            "g1f3",
+            "f7f6",
+            "b1c3",
+            "d7d6"
+          ],
+          "history_san": [
+            "e4",
+            "a5",
+            "Nf3",
+            "f6",
+            "Nc3",
+            "d6"
+          ]
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Play standard chess as White. Choose the strongest legal move to win. Consider opponent replies, hanging pieces, threats, king safety and checkmate. Keys are UCI from-square/to-square (optional promotion), descriptions are SAN. Choose exactly one offered move. You are the sole decision maker: no move has been ranked or filtered for strength. Independently examine opponent checks, captures and threats after your proposed move, including attacks on other pieces. A check or capture is not automatically good. A defended queen can still lose material against a cheaper attacker; assess the full exchange. Develop pieces and coordinate them, protect your king, and convert advantages into checkmate. Use both complete move histories to recognize unproductive repeated maneuvers; avoid repeating positions when you judge that you can win, but consider a draw when losing. These are general instructions, not tactical hints for this position.",
+            "criteria": {
+              "a1b1": "Rb1",
+              "a2a3": "a3",
+              "a2a4": "a4",
+              "b2b3": "b3",
+              "b2b4": "b4",
+              "c3a4": "Na4",
+              "c3b1": "Nb1",
+              "c3b5": "Nb5",
+              "c3d5": "Nd5",
+              "c3e2": "Ne2",
+              "d1e2": "Qe2",
+              "d2d3": "d3",
+              "d2d4": "d4",
+              "e1e2": "Ke2",
+              "e4e5": "e5",
+              "f1a6": "Ba6",
+              "f1b5": "Bb5+",
+              "f1c4": "Bc4",
+              "f1d3": "Bd3",
+              "f1e2": "Be2",
+              "f3d4": "Nd4",
+              "f3e5": "Ne5",
+              "f3g1": "Ng1",
+              "f3g5": "Ng5",
+              "f3h4": "Nh4",
+              "g2g3": "g3",
+              "g2g4": "g4",
+              "h1g1": "Rg1",
+              "h2h3": "h3",
+              "h2h4": "h4"
+            }
+          }
+        }
+      },
+      "safety": null,
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "move": {
+            "type": "choice",
+            "choice": "f1b5",
+            "probabilities": {
+              "f1c4": 0.08,
+              "f3d4": 0.05,
+              "a2a4": 0.03,
+              "d1e2": 0,
+              "h1g1": 0,
+              "c3a4": 0.01,
+              "g2g4": 0.01,
+              "f1b5": 0.17,
+              "f1a6": 0.02,
+              "f3g5": 0.01,
+              "d2d4": 0.14,
+              "d2d3": 0.04,
+              "c3e2": 0,
+              "e1e2": 0,
+              "h2h3": 0,
+              "f3h4": 0,
+              "b2b3": 0.01,
+              "e4e5": 0.06,
+              "f3e5": 0.09,
+              "c3b5": 0.02,
+              "f1d3": 0.09,
+              "h2h4": 0,
+              "b2b4": 0.03,
+              "a1b1": 0,
+              "g2g3": 0,
+              "c3b1": 0,
+              "c3d5": 0.1,
+              "f1e2": 0.03,
+              "f3g1": 0,
+              "a2a3": 0.01
+            },
+            "confidence": 0.13
+          }
+        },
+        "usage": {
+          "input_tokens": 1233,
+          "output_tokens": 320,
+          "cost": 5.1786e-05
+        },
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "fen": "rnbq1bnr/1pp1pkpp/3p1p2/pB6/4P3/2N2N2/PPPP1PPP/R1BQK2R w KQ - 2 5",
+          "board": "8 r n b q . b n r\n7 . p p . p k p p\n6 . . . p . p . .\n5 p B . . . . . .\n4 . . . . P . . .\n3 . . N . . N . .\n2 P P P P . P P P\n1 R . B Q K . . R\n  a b c d e f g h",
+          "legend": "Uppercase = White, lowercase = Black. P pawn, N knight, B bishop, R rook, Q queen, K king; . empty.",
+          "you_play": "White",
+          "in_check": false,
+          "history_uci": [
+            "e2e4",
+            "a7a5",
+            "g1f3",
+            "f7f6",
+            "b1c3",
+            "d7d6",
+            "f1b5",
+            "e8f7"
+          ],
+          "history_san": [
+            "e4",
+            "a5",
+            "Nf3",
+            "f6",
+            "Nc3",
+            "d6",
+            "Bb5+",
+            "Kf7"
+          ]
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Play standard chess as White. Choose the strongest legal move to win. Consider opponent replies, hanging pieces, threats, king safety and checkmate. Keys are UCI from-square/to-square (optional promotion), descriptions are SAN. Choose exactly one offered move. You are the sole decision maker: no move has been ranked or filtered for strength. Independently examine opponent checks, captures and threats after your proposed move, including attacks on other pieces. A check or capture is not automatically good. A defended queen can still lose material against a cheaper attacker; assess the full exchange. Develop pieces and coordinate them, protect your king, and convert advantages into checkmate. Use both complete move histories to recognize unproductive repeated maneuvers; avoid repeating positions when you judge that you can win, but consider a draw when losing. These are general instructions, not tactical hints for this position.",
+            "criteria": {
+              "a1b1": "Rb1",
+              "a2a3": "a3",
+              "a2a4": "a4",
+              "b2b3": "b3",
+              "b2b4": "b4",
+              "b5a4": "Ba4",
+              "b5a6": "Ba6",
+              "b5c4": "Bc4+",
+              "b5c6": "Bc6",
+              "b5d3": "Bd3",
+              "b5d7": "Bd7",
+              "b5e2": "Be2",
+              "b5e8": "Be8+",
+              "b5f1": "Bf1",
+              "c3a4": "Na4",
+              "c3b1": "Nb1",
+              "c3d5": "Nd5",
+              "c3e2": "Ne2",
+              "d1e2": "Qe2",
+              "d2d3": "d3",
+              "d2d4": "d4",
+              "e1e2": "Ke2",
+              "e1f1": "Kf1",
+              "e1g1": "O-O",
+              "e4e5": "e5",
+              "f3d4": "Nd4",
+              "f3e5": "Ne5+",
+              "f3g1": "Ng1",
+              "f3g5": "Ng5+",
+              "f3h4": "Nh4",
+              "g2g3": "g3",
+              "g2g4": "g4",
+              "h1f1": "Rf1",
+              "h1g1": "Rg1",
+              "h2h3": "h3",
+              "h2h4": "h4"
+            }
+          }
+        }
+      },
+      "safety": null,
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "move": {
+            "type": "choice",
+            "choice": "f3e5",
+            "probabilities": {
+              "f3g5": 0.1,
+              "b2b3": 0,
+              "d2d4": 0.02,
+              "f3d4": 0.02,
+              "b5d7": 0.02,
+              "c3d5": 0.04,
+              "e1g1": 0.12,
+              "e1e2": 0.01,
+              "c3b1": 0.01,
+              "c3e2": 0,
+              "a2a4": 0.01,
+              "b5c6": 0.02,
+              "g2g4": 0,
+              "d1e2": 0.01,
+              "b5e2": 0.01,
+              "b5e8": 0.18000000000000002,
+              "f3e5": 0.23,
+              "e1f1": 0.01,
+              "a2a3": 0,
+              "h1f1": 0.01,
+              "b5a4": 0.01,
+              "a1b1": 0.01,
+              "h1g1": 0,
+              "b5c4": 0.06,
+              "h2h3": 0,
+              "h2h4": 0,
+              "e4e5": 0.03,
+              "f3g1": 0,
+              "f3h4": 0.01,
+              "b2b4": 0,
+              "c3a4": 0.01,
+              "b5a6": 0.01,
+              "b5d3": 0.01,
+              "g2g3": 0.01,
+              "d2d3": 0.01,
+              "b5f1": 0.01
+            },
+            "confidence": 0.2
+          }
+        },
+        "usage": {
+          "input_tokens": 1358,
+          "output_tokens": 380,
+          "cost": 5.7036e-05
+        },
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "fen": "rnbq1bnr/1pp1pkpp/5p2/pB2p3/4P3/2N5/PPPP1PPP/R1BQK2R w KQ - 0 6",
+          "board": "8 r n b q . b n r\n7 . p p . p k p p\n6 . . . . . p . .\n5 p B . . p . . .\n4 . . . . P . . .\n3 . . N . . . . .\n2 P P P P . P P P\n1 R . B Q K . . R\n  a b c d e f g h",
+          "legend": "Uppercase = White, lowercase = Black. P pawn, N knight, B bishop, R rook, Q queen, K king; . empty.",
+          "you_play": "White",
+          "in_check": false,
+          "history_uci": [
+            "e2e4",
+            "a7a5",
+            "g1f3",
+            "f7f6",
+            "b1c3",
+            "d7d6",
+            "f1b5",
+            "e8f7",
+            "f3e5",
+            "d6e5"
+          ],
+          "history_san": [
+            "e4",
+            "a5",
+            "Nf3",
+            "f6",
+            "Nc3",
+            "d6",
+            "Bb5+",
+            "Kf7",
+            "Ne5+",
+            "dxe5"
+          ]
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Play standard chess as White. Choose the strongest legal move to win. Consider opponent replies, hanging pieces, threats, king safety and checkmate. Keys are UCI from-square/to-square (optional promotion), descriptions are SAN. Choose exactly one offered move. You are the sole decision maker: no move has been ranked or filtered for strength. Independently examine opponent checks, captures and threats after your proposed move, including attacks on other pieces. A check or capture is not automatically good. A defended queen can still lose material against a cheaper attacker; assess the full exchange. Develop pieces and coordinate them, protect your king, and convert advantages into checkmate. Use both complete move histories to recognize unproductive repeated maneuvers; avoid repeating positions when you judge that you can win, but consider a draw when losing. These are general instructions, not tactical hints for this position.",
+            "criteria": {
+              "a1b1": "Rb1",
+              "a2a3": "a3",
+              "a2a4": "a4",
+              "b2b3": "b3",
+              "b2b4": "b4",
+              "b5a4": "Ba4",
+              "b5a6": "Ba6",
+              "b5c4": "Bc4+",
+              "b5c6": "Bc6",
+              "b5d3": "Bd3",
+              "b5d7": "Bd7",
+              "b5e2": "Be2",
+              "b5e8": "Be8+",
+              "b5f1": "Bf1",
+              "c3a4": "Na4",
+              "c3b1": "Nb1",
+              "c3d5": "Nd5",
+              "c3e2": "Ne2",
+              "d1e2": "Qe2",
+              "d1f3": "Qf3",
+              "d1g4": "Qg4",
+              "d1h5": "Qh5+",
+              "d2d3": "d3",
+              "d2d4": "d4",
+              "e1e2": "Ke2",
+              "e1f1": "Kf1",
+              "e1g1": "O-O",
+              "f2f3": "f3",
+              "f2f4": "f4",
+              "g2g3": "g3",
+              "g2g4": "g4",
+              "h1f1": "Rf1",
+              "h1g1": "Rg1",
+              "h2h3": "h3",
+              "h2h4": "h4"
+            }
+          }
+        }
+      },
+      "safety": null,
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "move": {
+            "type": "choice",
+            "choice": "b5e8",
+            "probabilities": {
+              "c3e2": 0.01,
+              "b5a6": 0.01,
+              "e1g1": 0.09,
+              "f2f3": 0.01,
+              "f2f4": 0.01,
+              "d1f3": 0.04,
+              "b2b3": 0,
+              "b2b4": 0.01,
+              "a2a3": 0,
+              "b5c4": 0.09,
+              "c3a4": 0,
+              "g2g4": 0.01,
+              "e1f1": 0.01,
+              "b5f1": 0.03,
+              "a2a4": 0,
+              "d2d3": 0.01,
+              "b5a4": 0.01,
+              "e1e2": 0.01,
+              "a1b1": 0,
+              "b5d7": 0.02,
+              "b5d3": 0.02,
+              "c3b1": 0.01,
+              "h1f1": 0,
+              "c3d5": 0.04,
+              "d1h5": 0.16,
+              "g2g3": 0,
+              "h2h4": 0,
+              "h2h3": 0,
+              "d1g4": 0.07,
+              "d2d4": 0.03,
+              "d1e2": 0.03,
+              "h1g1": 0,
+              "b5e8": 0.23,
+              "b5e2": 0.02,
+              "b5c6": 0.02
+            },
+            "confidence": 0.2
+          }
+        },
+        "usage": {
+          "input_tokens": 1367,
+          "output_tokens": 370,
+          "cost": 5.7414e-05
+        },
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "fen": "rnb1qbnr/1pp1pkpp/5p2/p3p3/4P3/2N5/PPPP1PPP/R1BQK2R w KQ - 0 7",
+          "board": "8 r n b . q b n r\n7 . p p . p k p p\n6 . . . . . p . .\n5 p . . . p . . .\n4 . . . . P . . .\n3 . . N . . . . .\n2 P P P P . P P P\n1 R . B Q K . . R\n  a b c d e f g h",
+          "legend": "Uppercase = White, lowercase = Black. P pawn, N knight, B bishop, R rook, Q queen, K king; . empty.",
+          "you_play": "White",
+          "in_check": false,
+          "history_uci": [
+            "e2e4",
+            "a7a5",
+            "g1f3",
+            "f7f6",
+            "b1c3",
+            "d7d6",
+            "f1b5",
+            "e8f7",
+            "f3e5",
+            "d6e5",
+            "b5e8",
+            "d8e8"
+          ],
+          "history_san": [
+            "e4",
+            "a5",
+            "Nf3",
+            "f6",
+            "Nc3",
+            "d6",
+            "Bb5+",
+            "Kf7",
+            "Ne5+",
+            "dxe5",
+            "Be8+",
+            "Qxe8"
+          ]
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Play standard chess as White. Choose the strongest legal move to win. Consider opponent replies, hanging pieces, threats, king safety and checkmate. Keys are UCI from-square/to-square (optional promotion), descriptions are SAN. Choose exactly one offered move. You are the sole decision maker: no move has been ranked or filtered for strength. Independently examine opponent checks, captures and threats after your proposed move, including attacks on other pieces. A check or capture is not automatically good. A defended queen can still lose material against a cheaper attacker; assess the full exchange. Develop pieces and coordinate them, protect your king, and convert advantages into checkmate. Use both complete move histories to recognize unproductive repeated maneuvers; avoid repeating positions when you judge that you can win, but consider a draw when losing. These are general instructions, not tactical hints for this position.",
+            "criteria": {
+              "a1b1": "Rb1",
+              "a2a3": "a3",
+              "a2a4": "a4",
+              "b2b3": "b3",
+              "b2b4": "b4",
+              "c3a4": "Na4",
+              "c3b1": "Nb1",
+              "c3b5": "Nb5",
+              "c3d5": "Nd5",
+              "c3e2": "Ne2",
+              "d1e2": "Qe2",
+              "d1f3": "Qf3",
+              "d1g4": "Qg4",
+              "d1h5": "Qh5+",
+              "d2d3": "d3",
+              "d2d4": "d4",
+              "e1e2": "Ke2",
+              "e1f1": "Kf1",
+              "e1g1": "O-O",
+              "f2f3": "f3",
+              "f2f4": "f4",
+              "g2g3": "g3",
+              "g2g4": "g4",
+              "h1f1": "Rf1",
+              "h1g1": "Rg1",
+              "h2h3": "h3",
+              "h2h4": "h4"
+            }
+          }
+        }
+      },
+      "safety": null,
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "move": {
+            "type": "choice",
+            "choice": "d1h5",
+            "probabilities": {
+              "g2g4": 0.01,
+              "e1f1": 0.04,
+              "f2f3": 0.01,
+              "c3e2": 0.01,
+              "d1f3": 0.04,
+              "a2a3": 0.01,
+              "h2h4": 0.01,
+              "e1g1": 0.19999999999999998,
+              "c3b5": 0.03,
+              "d2d3": 0.01,
+              "h2h3": 0,
+              "c3d5": 0.13,
+              "d1h5": 0.21,
+              "f2f4": 0.01,
+              "d1g4": 0.06,
+              "a2a4": 0.02,
+              "h1g1": 0.01,
+              "a1b1": 0.02,
+              "d2d4": 0.03,
+              "e1e2": 0.03,
+              "b2b3": 0,
+              "g2g3": 0.01,
+              "c3b1": 0.01,
+              "c3a4": 0.01,
+              "d1e2": 0.06,
+              "h1f1": 0.01,
+              "b2b4": 0.01
+            },
+            "confidence": 0.19
+          }
+        },
+        "usage": {
+          "input_tokens": 1261,
+          "output_tokens": 290,
+          "cost": 5.2962e-05
+        },
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "fen": "rnb1qbnr/1pp1pk1p/5pp1/p3p2Q/4P3/2N5/PPPP1PPP/R1B1K2R w KQ - 0 8",
+          "board": "8 r n b . q b n r\n7 . p p . p k . p\n6 . . . . . p p .\n5 p . . . p . . Q\n4 . . . . P . . .\n3 . . N . . . . .\n2 P P P P . P P P\n1 R . B . K . . R\n  a b c d e f g h",
+          "legend": "Uppercase = White, lowercase = Black. P pawn, N knight, B bishop, R rook, Q queen, K king; . empty.",
+          "you_play": "White",
+          "in_check": false,
+          "history_uci": [
+            "e2e4",
+            "a7a5",
+            "g1f3",
+            "f7f6",
+            "b1c3",
+            "d7d6",
+            "f1b5",
+            "e8f7",
+            "f3e5",
+            "d6e5",
+            "b5e8",
+            "d8e8",
+            "d1h5",
+            "g7g6"
+          ],
+          "history_san": [
+            "e4",
+            "a5",
+            "Nf3",
+            "f6",
+            "Nc3",
+            "d6",
+            "Bb5+",
+            "Kf7",
+            "Ne5+",
+            "dxe5",
+            "Be8+",
+            "Qxe8",
+            "Qh5+",
+            "g6"
+          ]
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Play standard chess as White. Choose the strongest legal move to win. Consider opponent replies, hanging pieces, threats, king safety and checkmate. Keys are UCI from-square/to-square (optional promotion), descriptions are SAN. Choose exactly one offered move. You are the sole decision maker: no move has been ranked or filtered for strength. Independently examine opponent checks, captures and threats after your proposed move, including attacks on other pieces. A check or capture is not automatically good. A defended queen can still lose material against a cheaper attacker; assess the full exchange. Develop pieces and coordinate them, protect your king, and convert advantages into checkmate. Use both complete move histories to recognize unproductive repeated maneuvers; avoid repeating positions when you judge that you can win, but consider a draw when losing. These are general instructions, not tactical hints for this position.",
+            "criteria": {
+              "a1b1": "Rb1",
+              "a2a3": "a3",
+              "a2a4": "a4",
+              "b2b3": "b3",
+              "b2b4": "b4",
+              "c3a4": "Na4",
+              "c3b1": "Nb1",
+              "c3b5": "Nb5",
+              "c3d1": "Nd1",
+              "c3d5": "Nd5",
+              "c3e2": "Ne2",
+              "d2d3": "d3",
+              "d2d4": "d4",
+              "e1d1": "Kd1",
+              "e1e2": "Ke2",
+              "e1f1": "Kf1",
+              "e1g1": "O-O",
+              "f2f3": "f3",
+              "f2f4": "f4",
+              "g2g3": "g3",
+              "g2g4": "g4",
+              "h1f1": "Rf1",
+              "h1g1": "Rg1",
+              "h2h3": "h3",
+              "h2h4": "h4",
+              "h5d1": "Qd1",
+              "h5e2": "Qe2",
+              "h5e5": "Qxe5",
+              "h5f3": "Qf3",
+              "h5f5": "Qf5",
+              "h5g4": "Qg4",
+              "h5g5": "Qg5",
+              "h5g6": "Qxg6+",
+              "h5h3": "Qh3",
+              "h5h4": "Qh4",
+              "h5h6": "Qh6",
+              "h5h7": "Qxh7+"
+            }
+          }
+        }
+      },
+      "safety": null,
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "move": {
+            "type": "choice",
+            "choice": "h5g6",
+            "probabilities": {
+              "c3e2": 0.01,
+              "c3d1": 0,
+              "h5e2": 0.01,
+              "h5g4": 0.03,
+              "f2f3": 0.01,
+              "h1f1": 0.01,
+              "h5d1": 0.01,
+              "e1e2": 0,
+              "h5h6": 0.01,
+              "c3b1": 0,
+              "h5g5": 0.02,
+              "f2f4": 0.01,
+              "a1b1": 0,
+              "c3d5": 0.03,
+              "h5f5": 0.02,
+              "a2a3": 0,
+              "a2a4": 0,
+              "h2h3": 0,
+              "h5e5": 0.15000000000000002,
+              "b2b3": 0,
+              "c3a4": 0.01,
+              "h5g6": 0.32,
+              "d2d4": 0.01,
+              "h1g1": 0,
+              "e1f1": 0.01,
+              "h5h4": 0.01,
+              "h5h7": 0.2,
+              "h2h4": 0.01,
+              "c3b5": 0.01,
+              "d2d3": 0,
+              "e1d1": 0.01,
+              "h5h3": 0,
+              "h5f3": 0.02,
+              "e1g1": 0.05,
+              "b2b4": 0,
+              "g2g3": 0.01,
+              "g2g4": 0.01
+            },
+            "confidence": 0.29
+          }
+        },
+        "usage": {
+          "input_tokens": 1460,
+          "output_tokens": 390,
+          "cost": 6.132e-05
+        },
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "fen": "rnb1qbnr/1pp1p2p/5pk1/p3p3/4P3/2N5/PPPP1PPP/R1B1K2R w KQ - 0 9",
+          "board": "8 r n b . q b n r\n7 . p p . p . . p\n6 . . . . . p k .\n5 p . . . p . . .\n4 . . . . P . . .\n3 . . N . . . . .\n2 P P P P . P P P\n1 R . B . K . . R\n  a b c d e f g h",
+          "legend": "Uppercase = White, lowercase = Black. P pawn, N knight, B bishop, R rook, Q queen, K king; . empty.",
+          "you_play": "White",
+          "in_check": false,
+          "history_uci": [
+            "e2e4",
+            "a7a5",
+            "g1f3",
+            "f7f6",
+            "b1c3",
+            "d7d6",
+            "f1b5",
+            "e8f7",
+            "f3e5",
+            "d6e5",
+            "b5e8",
+            "d8e8",
+            "d1h5",
+            "g7g6",
+            "h5g6",
+            "f7g6"
+          ],
+          "history_san": [
+            "e4",
+            "a5",
+            "Nf3",
+            "f6",
+            "Nc3",
+            "d6",
+            "Bb5+",
+            "Kf7",
+            "Ne5+",
+            "dxe5",
+            "Be8+",
+            "Qxe8",
+            "Qh5+",
+            "g6",
+            "Qxg6+",
+            "Kxg6"
+          ]
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Play standard chess as White. Choose the strongest legal move to win. Consider opponent replies, hanging pieces, threats, king safety and checkmate. Keys are UCI from-square/to-square (optional promotion), descriptions are SAN. Choose exactly one offered move. You are the sole decision maker: no move has been ranked or filtered for strength. Independently examine opponent checks, captures and threats after your proposed move, including attacks on other pieces. A check or capture is not automatically good. A defended queen can still lose material against a cheaper attacker; assess the full exchange. Develop pieces and coordinate them, protect your king, and convert advantages into checkmate. Use both complete move histories to recognize unproductive repeated maneuvers; avoid repeating positions when you judge that you can win, but consider a draw when losing. These are general instructions, not tactical hints for this position.",
+            "criteria": {
+              "a1b1": "Rb1",
+              "a2a3": "a3",
+              "a2a4": "a4",
+              "b2b3": "b3",
+              "b2b4": "b4",
+              "c3a4": "Na4",
+              "c3b1": "Nb1",
+              "c3b5": "Nb5",
+              "c3d1": "Nd1",
+              "c3d5": "Nd5",
+              "c3e2": "Ne2",
+              "d2d3": "d3",
+              "d2d4": "d4",
+              "e1d1": "Kd1",
+              "e1e2": "Ke2",
+              "e1f1": "Kf1",
+              "e1g1": "O-O",
+              "f2f3": "f3",
+              "f2f4": "f4",
+              "g2g3": "g3",
+              "g2g4": "g4",
+              "h1f1": "Rf1",
+              "h1g1": "Rg1",
+              "h2h3": "h3",
+              "h2h4": "h4"
+            }
+          }
+        }
+      },
+      "safety": null,
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "move": {
+            "type": "choice",
+            "choice": "e1g1",
+            "probabilities": {
+              "b2b4": 0.01,
+              "c3e2": 0.03,
+              "e1e2": 0.03,
+              "c3b1": 0.01,
+              "c3d5": 0.11,
+              "e1d1": 0.03,
+              "a2a3": 0.01,
+              "f2f4": 0.03,
+              "g2g4": 0.03,
+              "e1g1": 0.18,
+              "b2b3": 0.01,
+              "d2d4": 0.08,
+              "h1f1": 0.04,
+              "d2d3": 0.02,
+              "g2g3": 0.02,
+              "f2f3": 0.06,
+              "c3a4": 0.04,
+              "c3d1": 0.02,
+              "h1g1": 0.07,
+              "a2a4": 0.02,
+              "h2h3": 0.01,
+              "e1f1": 0.06,
+              "a1b1": 0.02,
+              "h2h4": 0.02,
+              "c3b5": 0.04
+            },
+            "confidence": 0.14
+          }
+        },
+        "usage": {
+          "input_tokens": 1282,
+          "output_tokens": 270,
+          "cost": 5.3844e-05
+        },
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "fen": "rn2qbnr/1pp1p2p/5pk1/p3p3/4P1b1/2N5/PPPP1PPP/R1B2RK1 w - - 2 10",
+          "board": "8 r n . . q b n r\n7 . p p . p . . p\n6 . . . . . p k .\n5 p . . . p . . .\n4 . . . . P . b .\n3 . . N . . . . .\n2 P P P P . P P P\n1 R . B . . R K .\n  a b c d e f g h",
+          "legend": "Uppercase = White, lowercase = Black. P pawn, N knight, B bishop, R rook, Q queen, K king; . empty.",
+          "you_play": "White",
+          "in_check": false,
+          "history_uci": [
+            "e2e4",
+            "a7a5",
+            "g1f3",
+            "f7f6",
+            "b1c3",
+            "d7d6",
+            "f1b5",
+            "e8f7",
+            "f3e5",
+            "d6e5",
+            "b5e8",
+            "d8e8",
+            "d1h5",
+            "g7g6",
+            "h5g6",
+            "f7g6",
+            "e1g1",
+            "c8g4"
+          ],
+          "history_san": [
+            "e4",
+            "a5",
+            "Nf3",
+            "f6",
+            "Nc3",
+            "d6",
+            "Bb5+",
+            "Kf7",
+            "Ne5+",
+            "dxe5",
+            "Be8+",
+            "Qxe8",
+            "Qh5+",
+            "g6",
+            "Qxg6+",
+            "Kxg6",
+            "O-O",
+            "Bg4"
+          ]
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Play standard chess as White. Choose the strongest legal move to win. Consider opponent replies, hanging pieces, threats, king safety and checkmate. Keys are UCI from-square/to-square (optional promotion), descriptions are SAN. Choose exactly one offered move. You are the sole decision maker: no move has been ranked or filtered for strength. Independently examine opponent checks, captures and threats after your proposed move, including attacks on other pieces. A check or capture is not automatically good. A defended queen can still lose material against a cheaper attacker; assess the full exchange. Develop pieces and coordinate them, protect your king, and convert advantages into checkmate. Use both complete move histories to recognize unproductive repeated maneuvers; avoid repeating positions when you judge that you can win, but consider a draw when losing. These are general instructions, not tactical hints for this position.",
+            "criteria": {
+              "a1b1": "Rb1",
+              "a2a3": "a3",
+              "a2a4": "a4",
+              "b2b3": "b3",
+              "b2b4": "b4",
+              "c3a4": "Na4",
+              "c3b1": "Nb1",
+              "c3b5": "Nb5",
+              "c3d1": "Nd1",
+              "c3d5": "Nd5",
+              "c3e2": "Ne2",
+              "d2d3": "d3",
+              "d2d4": "d4",
+              "f1d1": "Rd1",
+              "f1e1": "Re1",
+              "f2f3": "f3",
+              "f2f4": "f4",
+              "g1h1": "Kh1",
+              "g2g3": "g3",
+              "h2h3": "h3",
+              "h2h4": "h4"
+            }
+          }
+        }
+      },
+      "safety": null,
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "move": {
+            "type": "choice",
+            "choice": "c3d5",
+            "probabilities": {
+              "b2b3": 0.02,
+              "a2a4": 0.02,
+              "f1d1": 0.08,
+              "c3a4": 0.04,
+              "c3b5": 0.05,
+              "b2b4": 0.02,
+              "h2h4": 0.04,
+              "f1e1": 0.06,
+              "g1h1": 0.03,
+              "a1b1": 0.04,
+              "d2d4": 0.09,
+              "d2d3": 0.04,
+              "c3e2": 0.08,
+              "f2f3": 0.07,
+              "c3b1": 0.02,
+              "g2g3": 0.06,
+              "h2h3": 0.03,
+              "a2a3": 0.01,
+              "c3d1": 0.04,
+              "f2f4": 0.03,
+              "c3d5": 0.13
+            },
+            "confidence": 0.1
+          }
+        },
+        "usage": {
+          "input_tokens": 1240,
+          "output_tokens": 230,
+          "cost": 5.208e-05
+        },
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "fen": "rn2qbnr/1ppbp2p/5pk1/p2Np3/4P3/8/PPPP1PPP/R1B2RK1 w - - 4 11",
+          "board": "8 r n . . q b n r\n7 . p p b p . . p\n6 . . . . . p k .\n5 p . . N p . . .\n4 . . . . P . . .\n3 . . . . . . . .\n2 P P P P . P P P\n1 R . B . . R K .\n  a b c d e f g h",
+          "legend": "Uppercase = White, lowercase = Black. P pawn, N knight, B bishop, R rook, Q queen, K king; . empty.",
+          "you_play": "White",
+          "in_check": false,
+          "history_uci": [
+            "e2e4",
+            "a7a5",
+            "g1f3",
+            "f7f6",
+            "b1c3",
+            "d7d6",
+            "f1b5",
+            "e8f7",
+            "f3e5",
+            "d6e5",
+            "b5e8",
+            "d8e8",
+            "d1h5",
+            "g7g6",
+            "h5g6",
+            "f7g6",
+            "e1g1",
+            "c8g4",
+            "c3d5",
+            "g4d7"
+          ],
+          "history_san": [
+            "e4",
+            "a5",
+            "Nf3",
+            "f6",
+            "Nc3",
+            "d6",
+            "Bb5+",
+            "Kf7",
+            "Ne5+",
+            "dxe5",
+            "Be8+",
+            "Qxe8",
+            "Qh5+",
+            "g6",
+            "Qxg6+",
+            "Kxg6",
+            "O-O",
+            "Bg4",
+            "Nd5",
+            "Bd7"
+          ]
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Play standard chess as White. Choose the strongest legal move to win. Consider opponent replies, hanging pieces, threats, king safety and checkmate. Keys are UCI from-square/to-square (optional promotion), descriptions are SAN. Choose exactly one offered move. You are the sole decision maker: no move has been ranked or filtered for strength. Independently examine opponent checks, captures and threats after your proposed move, including attacks on other pieces. A check or capture is not automatically good. A defended queen can still lose material against a cheaper attacker; assess the full exchange. Develop pieces and coordinate them, protect your king, and convert advantages into checkmate. Use both complete move histories to recognize unproductive repeated maneuvers; avoid repeating positions when you judge that you can win, but consider a draw when losing. These are general instructions, not tactical hints for this position.",
+            "criteria": {
+              "a1b1": "Rb1",
+              "a2a3": "a3",
+              "a2a4": "a4",
+              "b2b3": "b3",
+              "b2b4": "b4",
+              "c2c3": "c3",
+              "c2c4": "c4",
+              "d2d3": "d3",
+              "d2d4": "d4",
+              "d5b4": "Nb4",
+              "d5b6": "Nb6",
+              "d5c3": "Nc3",
+              "d5c7": "Nxc7",
+              "d5e3": "Ne3",
+              "d5e7": "Nxe7+",
+              "d5f4": "Nf4+",
+              "d5f6": "Nxf6",
+              "f1d1": "Rd1",
+              "f1e1": "Re1",
+              "f2f3": "f3",
+              "f2f4": "f4",
+              "g1h1": "Kh1",
+              "g2g3": "g3",
+              "g2g4": "g4",
+              "h2h3": "h3",
+              "h2h4": "h4"
+            }
+          }
+        }
+      },
+      "safety": null,
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "move": {
+            "type": "choice",
+            "choice": "d5e7",
+            "probabilities": {
+              "c2c3": 0.01,
+              "d5b4": 0.01,
+              "f1d1": 0.03,
+              "d5e7": 0.29,
+              "d5f4": 0.13,
+              "d5b6": 0.04,
+              "g2g4": 0.01,
+              "d2d3": 0.01,
+              "h2h3": 0,
+              "f2f3": 0.01,
+              "b2b3": 0,
+              "a2a4": 0.01,
+              "d5e3": 0.02,
+              "d5c3": 0.01,
+              "h2h4": 0.01,
+              "d2d4": 0.03,
+              "g1h1": 0.01,
+              "d5f6": 0.09,
+              "g2g3": 0.01,
+              "f2f4": 0.01,
+              "c2c4": 0.01,
+              "f1e1": 0.02,
+              "a1b1": 0.01,
+              "b2b4": 0.01,
+              "d5c7": 0.21,
+              "a2a3": 0
+            },
+            "confidence": 0.27
+          }
+        },
+        "usage": {
+          "input_tokens": 1345,
+          "output_tokens": 280,
+          "cost": 5.649e-05
+        },
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "fen": "rn3bnr/1ppbq2p/5pk1/p3p3/4P3/8/PPPP1PPP/R1B2RK1 w - - 0 12",
+          "board": "8 r n . . . b n r\n7 . p p b q . . p\n6 . . . . . p k .\n5 p . . . p . . .\n4 . . . . P . . .\n3 . . . . . . . .\n2 P P P P . P P P\n1 R . B . . R K .\n  a b c d e f g h",
+          "legend": "Uppercase = White, lowercase = Black. P pawn, N knight, B bishop, R rook, Q queen, K king; . empty.",
+          "you_play": "White",
+          "in_check": false,
+          "history_uci": [
+            "e2e4",
+            "a7a5",
+            "g1f3",
+            "f7f6",
+            "b1c3",
+            "d7d6",
+            "f1b5",
+            "e8f7",
+            "f3e5",
+            "d6e5",
+            "b5e8",
+            "d8e8",
+            "d1h5",
+            "g7g6",
+            "h5g6",
+            "f7g6",
+            "e1g1",
+            "c8g4",
+            "c3d5",
+            "g4d7",
+            "d5e7",
+            "e8e7"
+          ],
+          "history_san": [
+            "e4",
+            "a5",
+            "Nf3",
+            "f6",
+            "Nc3",
+            "d6",
+            "Bb5+",
+            "Kf7",
+            "Ne5+",
+            "dxe5",
+            "Be8+",
+            "Qxe8",
+            "Qh5+",
+            "g6",
+            "Qxg6+",
+            "Kxg6",
+            "O-O",
+            "Bg4",
+            "Nd5",
+            "Bd7",
+            "Nxe7+",
+            "Qxe7"
+          ]
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Play standard chess as White. Choose the strongest legal move to win. Consider opponent replies, hanging pieces, threats, king safety and checkmate. Keys are UCI from-square/to-square (optional promotion), descriptions are SAN. Choose exactly one offered move. You are the sole decision maker: no move has been ranked or filtered for strength. Independently examine opponent checks, captures and threats after your proposed move, including attacks on other pieces. A check or capture is not automatically good. A defended queen can still lose material against a cheaper attacker; assess the full exchange. Develop pieces and coordinate them, protect your king, and convert advantages into checkmate. Use both complete move histories to recognize unproductive repeated maneuvers; avoid repeating positions when you judge that you can win, but consider a draw when losing. These are general instructions, not tactical hints for this position.",
+            "criteria": {
+              "a1b1": "Rb1",
+              "a2a3": "a3",
+              "a2a4": "a4",
+              "b2b3": "b3",
+              "b2b4": "b4",
+              "c2c3": "c3",
+              "c2c4": "c4",
+              "d2d3": "d3",
+              "d2d4": "d4",
+              "f1d1": "Rd1",
+              "f1e1": "Re1",
+              "f2f3": "f3",
+              "f2f4": "f4",
+              "g1h1": "Kh1",
+              "g2g3": "g3",
+              "g2g4": "g4",
+              "h2h3": "h3",
+              "h2h4": "h4"
+            }
+          }
+        }
+      },
+      "safety": null,
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "move": {
+            "type": "choice",
+            "choice": "f1d1",
+            "probabilities": {
+              "h2h4": 0.03,
+              "a2a4": 0.04,
+              "c2c4": 0.04,
+              "h2h3": 0.01,
+              "f1d1": 0.19,
+              "f2f3": 0.05,
+              "d2d4": 0.14,
+              "d2d3": 0.04,
+              "g2g3": 0.02,
+              "f1e1": 0.16,
+              "c2c3": 0.03,
+              "a2a3": 0.01,
+              "f2f4": 0.05,
+              "b2b3": 0.02,
+              "g1h1": 0.02,
+              "g2g4": 0.04,
+              "a1b1": 0.08,
+              "b2b4": 0.03
+            },
+            "confidence": 0.14
+          }
+        },
+        "usage": {
+          "input_tokens": 1238,
+          "output_tokens": 200,
+          "cost": 5.1996e-05
+        },
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "fen": "rn4nr/1ppbq2p/5pkb/p3p3/4P3/8/PPPP1PPP/R1BR2K1 w - - 2 13",
+          "board": "8 r n . . . . n r\n7 . p p b q . . p\n6 . . . . . p k b\n5 p . . . p . . .\n4 . . . . P . . .\n3 . . . . . . . .\n2 P P P P . P P P\n1 R . B R . . K .\n  a b c d e f g h",
+          "legend": "Uppercase = White, lowercase = Black. P pawn, N knight, B bishop, R rook, Q queen, K king; . empty.",
+          "you_play": "White",
+          "in_check": false,
+          "history_uci": [
+            "e2e4",
+            "a7a5",
+            "g1f3",
+            "f7f6",
+            "b1c3",
+            "d7d6",
+            "f1b5",
+            "e8f7",
+            "f3e5",
+            "d6e5",
+            "b5e8",
+            "d8e8",
+            "d1h5",
+            "g7g6",
+            "h5g6",
+            "f7g6",
+            "e1g1",
+            "c8g4",
+            "c3d5",
+            "g4d7",
+            "d5e7",
+            "e8e7",
+            "f1d1",
+            "f8h6"
+          ],
+          "history_san": [
+            "e4",
+            "a5",
+            "Nf3",
+            "f6",
+            "Nc3",
+            "d6",
+            "Bb5+",
+            "Kf7",
+            "Ne5+",
+            "dxe5",
+            "Be8+",
+            "Qxe8",
+            "Qh5+",
+            "g6",
+            "Qxg6+",
+            "Kxg6",
+            "O-O",
+            "Bg4",
+            "Nd5",
+            "Bd7",
+            "Nxe7+",
+            "Qxe7",
+            "Rd1",
+            "Bh6"
+          ]
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Play standard chess as White. Choose the strongest legal move to win. Consider opponent replies, hanging pieces, threats, king safety and checkmate. Keys are UCI from-square/to-square (optional promotion), descriptions are SAN. Choose exactly one offered move. You are the sole decision maker: no move has been ranked or filtered for strength. Independently examine opponent checks, captures and threats after your proposed move, including attacks on other pieces. A check or capture is not automatically good. A defended queen can still lose material against a cheaper attacker; assess the full exchange. Develop pieces and coordinate them, protect your king, and convert advantages into checkmate. Use both complete move histories to recognize unproductive repeated maneuvers; avoid repeating positions when you judge that you can win, but consider a draw when losing. These are general instructions, not tactical hints for this position.",
+            "criteria": {
+              "a1b1": "Rb1",
+              "a2a3": "a3",
+              "a2a4": "a4",
+              "b2b3": "b3",
+              "b2b4": "b4",
+              "c2c3": "c3",
+              "c2c4": "c4",
+              "d1e1": "Re1",
+              "d1f1": "Rf1",
+              "d2d3": "d3",
+              "d2d4": "d4",
+              "f2f3": "f3",
+              "f2f4": "f4",
+              "g1f1": "Kf1",
+              "g1h1": "Kh1",
+              "g2g3": "g3",
+              "g2g4": "g4",
+              "h2h3": "h3",
+              "h2h4": "h4"
+            }
+          }
+        }
+      },
+      "safety": null,
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "move": {
+            "type": "choice",
+            "choice": "d2d4",
+            "probabilities": {
+              "g1f1": 0.04,
+              "h2h3": 0.03,
+              "g2g4": 0.07,
+              "g2g3": 0.04,
+              "a2a3": 0.02,
+              "g1h1": 0.02,
+              "b2b4": 0.03,
+              "b2b3": 0.03,
+              "h2h4": 0.05,
+              "a1b1": 0.06,
+              "d2d4": 0.13,
+              "c2c4": 0.05,
+              "d1e1": 0.12,
+              "d1f1": 0.08,
+              "f2f4": 0.06,
+              "f2f3": 0.06,
+              "a2a4": 0.03,
+              "c2c3": 0.03,
+              "d2d3": 0.05
+            },
+            "confidence": 0.09
+          }
+        },
+        "usage": {
+          "input_tokens": 1279,
+          "output_tokens": 210,
+          "cost": 5.3718e-05
+        },
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "fen": "rn4nr/1ppbq2p/5pk1/p3p3/3PP3/8/PPP2PPP/R1bR2K1 w - - 0 14",
+          "board": "8 r n . . . . n r\n7 . p p b q . . p\n6 . . . . . p k .\n5 p . . . p . . .\n4 . . . P P . . .\n3 . . . . . . . .\n2 P P P . . P P P\n1 R . b R . . K .\n  a b c d e f g h",
+          "legend": "Uppercase = White, lowercase = Black. P pawn, N knight, B bishop, R rook, Q queen, K king; . empty.",
+          "you_play": "White",
+          "in_check": false,
+          "history_uci": [
+            "e2e4",
+            "a7a5",
+            "g1f3",
+            "f7f6",
+            "b1c3",
+            "d7d6",
+            "f1b5",
+            "e8f7",
+            "f3e5",
+            "d6e5",
+            "b5e8",
+            "d8e8",
+            "d1h5",
+            "g7g6",
+            "h5g6",
+            "f7g6",
+            "e1g1",
+            "c8g4",
+            "c3d5",
+            "g4d7",
+            "d5e7",
+            "e8e7",
+            "f1d1",
+            "f8h6",
+            "d2d4",
+            "h6c1"
+          ],
+          "history_san": [
+            "e4",
+            "a5",
+            "Nf3",
+            "f6",
+            "Nc3",
+            "d6",
+            "Bb5+",
+            "Kf7",
+            "Ne5+",
+            "dxe5",
+            "Be8+",
+            "Qxe8",
+            "Qh5+",
+            "g6",
+            "Qxg6+",
+            "Kxg6",
+            "O-O",
+            "Bg4",
+            "Nd5",
+            "Bd7",
+            "Nxe7+",
+            "Qxe7",
+            "Rd1",
+            "Bh6",
+            "d4",
+            "Bxc1"
+          ]
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Play standard chess as White. Choose the strongest legal move to win. Consider opponent replies, hanging pieces, threats, king safety and checkmate. Keys are UCI from-square/to-square (optional promotion), descriptions are SAN. Choose exactly one offered move. You are the sole decision maker: no move has been ranked or filtered for strength. Independently examine opponent checks, captures and threats after your proposed move, including attacks on other pieces. A check or capture is not automatically good. A defended queen can still lose material against a cheaper attacker; assess the full exchange. Develop pieces and coordinate them, protect your king, and convert advantages into checkmate. Use both complete move histories to recognize unproductive repeated maneuvers; avoid repeating positions when you judge that you can win, but consider a draw when losing. These are general instructions, not tactical hints for this position.",
+            "criteria": {
+              "a1b1": "Rb1",
+              "a1c1": "Raxc1",
+              "a2a3": "a3",
+              "a2a4": "a4",
+              "b2b3": "b3",
+              "b2b4": "b4",
+              "c2c3": "c3",
+              "c2c4": "c4",
+              "d1c1": "Rdxc1",
+              "d1d2": "Rd2",
+              "d1d3": "Rd3",
+              "d1e1": "Re1",
+              "d1f1": "Rf1",
+              "d4d5": "d5",
+              "d4e5": "dxe5",
+              "f2f3": "f3",
+              "f2f4": "f4",
+              "g1f1": "Kf1",
+              "g1h1": "Kh1",
+              "g2g3": "g3",
+              "g2g4": "g4",
+              "h2h3": "h3",
+              "h2h4": "h4"
+            }
+          }
+        }
+      },
+      "safety": null,
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "move": {
+            "type": "choice",
+            "choice": "d1c1",
+            "probabilities": {
+              "d1d3": 0.03,
+              "d1c1": 0.36,
+              "a1c1": 0.27,
+              "h2h4": 0.01,
+              "b2b4": 0.01,
+              "a2a4": 0.01,
+              "c2c4": 0,
+              "d1d2": 0.01,
+              "c2c3": 0.01,
+              "f2f3": 0.01,
+              "g1f1": 0.01,
+              "g2g3": 0.01,
+              "h2h3": 0.01,
+              "a2a3": 0.01,
+              "d4d5": 0.04,
+              "d1f1": 0.01,
+              "f2f4": 0.01,
+              "d1e1": 0.02,
+              "b2b3": 0.01,
+              "g1h1": 0.01,
+              "g2g4": 0.01,
+              "a1b1": 0.02,
+              "d4e5": 0.11
+            },
+            "confidence": 0.35
+          }
+        },
+        "usage": {
+          "input_tokens": 1371,
+          "output_tokens": 250,
+          "cost": 5.7582e-05
+        },
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "fen": "rn4nr/1ppbq2p/5pk1/p7/3pP3/8/PPP2PPP/R1R3K1 w - - 0 15",
+          "board": "8 r n . . . . n r\n7 . p p b q . . p\n6 . . . . . p k .\n5 p . . . . . . .\n4 . . . p P . . .\n3 . . . . . . . .\n2 P P P . . P P P\n1 R . R . . . K .\n  a b c d e f g h",
+          "legend": "Uppercase = White, lowercase = Black. P pawn, N knight, B bishop, R rook, Q queen, K king; . empty.",
+          "you_play": "White",
+          "in_check": false,
+          "history_uci": [
+            "e2e4",
+            "a7a5",
+            "g1f3",
+            "f7f6",
+            "b1c3",
+            "d7d6",
+            "f1b5",
+            "e8f7",
+            "f3e5",
+            "d6e5",
+            "b5e8",
+            "d8e8",
+            "d1h5",
+            "g7g6",
+            "h5g6",
+            "f7g6",
+            "e1g1",
+            "c8g4",
+            "c3d5",
+            "g4d7",
+            "d5e7",
+            "e8e7",
+            "f1d1",
+            "f8h6",
+            "d2d4",
+            "h6c1",
+            "d1c1",
+            "e5d4"
+          ],
+          "history_san": [
+            "e4",
+            "a5",
+            "Nf3",
+            "f6",
+            "Nc3",
+            "d6",
+            "Bb5+",
+            "Kf7",
+            "Ne5+",
+            "dxe5",
+            "Be8+",
+            "Qxe8",
+            "Qh5+",
+            "g6",
+            "Qxg6+",
+            "Kxg6",
+            "O-O",
+            "Bg4",
+            "Nd5",
+            "Bd7",
+            "Nxe7+",
+            "Qxe7",
+            "Rd1",
+            "Bh6",
+            "d4",
+            "Bxc1",
+            "Rdxc1",
+            "exd4"
+          ]
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Play standard chess as White. Choose the strongest legal move to win. Consider opponent replies, hanging pieces, threats, king safety and checkmate. Keys are UCI from-square/to-square (optional promotion), descriptions are SAN. Choose exactly one offered move. You are the sole decision maker: no move has been ranked or filtered for strength. Independently examine opponent checks, captures and threats after your proposed move, including attacks on other pieces. A check or capture is not automatically good. A defended queen can still lose material against a cheaper attacker; assess the full exchange. Develop pieces and coordinate them, protect your king, and convert advantages into checkmate. Use both complete move histories to recognize unproductive repeated maneuvers; avoid repeating positions when you judge that you can win, but consider a draw when losing. These are general instructions, not tactical hints for this position.",
+            "criteria": {
+              "a1b1": "Rab1",
+              "a2a3": "a3",
+              "a2a4": "a4",
+              "b2b3": "b3",
+              "b2b4": "b4",
+              "c1b1": "Rcb1",
+              "c1d1": "Rd1",
+              "c1e1": "Re1",
+              "c1f1": "Rf1",
+              "c2c3": "c3",
+              "c2c4": "c4",
+              "e4e5": "e5",
+              "f2f3": "f3",
+              "f2f4": "f4",
+              "g1f1": "Kf1",
+              "g1h1": "Kh1",
+              "g2g3": "g3",
+              "g2g4": "g4",
+              "h2h3": "h3",
+              "h2h4": "h4"
+            }
+          }
+        }
+      },
+      "safety": null,
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "move": {
+            "type": "choice",
+            "choice": "c1d1",
+            "probabilities": {
+              "c1e1": 0.11,
+              "f2f4": 0.04,
+              "g2g4": 0.04,
+              "g2g3": 0.04,
+              "g1f1": 0.04,
+              "c1b1": 0.04,
+              "e4e5": 0.13,
+              "h2h4": 0.02,
+              "a2a4": 0.03,
+              "f2f3": 0.03,
+              "c1f1": 0.05,
+              "a2a3": 0.02,
+              "b2b4": 0.03,
+              "h2h3": 0.02,
+              "a1b1": 0.04,
+              "c2c4": 0.06,
+              "g1h1": 0.04,
+              "b2b3": 0.02,
+              "c1d1": 0.16,
+              "c2c3": 0.04
+            },
+            "confidence": 0.12
+          }
+        },
+        "usage": {
+          "input_tokens": 1344,
+          "output_tokens": 220,
+          "cost": 5.6448e-05
+        },
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "fen": "rn4nr/1ppb3p/5pk1/p7/3pq3/8/PPP2PPP/R2R2K1 w - - 0 16",
+          "board": "8 r n . . . . n r\n7 . p p b . . . p\n6 . . . . . p k .\n5 p . . . . . . .\n4 . . . p q . . .\n3 . . . . . . . .\n2 P P P . . P P P\n1 R . . R . . K .\n  a b c d e f g h",
+          "legend": "Uppercase = White, lowercase = Black. P pawn, N knight, B bishop, R rook, Q queen, K king; . empty.",
+          "you_play": "White",
+          "in_check": false,
+          "history_uci": [
+            "e2e4",
+            "a7a5",
+            "g1f3",
+            "f7f6",
+            "b1c3",
+            "d7d6",
+            "f1b5",
+            "e8f7",
+            "f3e5",
+            "d6e5",
+            "b5e8",
+            "d8e8",
+            "d1h5",
+            "g7g6",
+            "h5g6",
+            "f7g6",
+            "e1g1",
+            "c8g4",
+            "c3d5",
+            "g4d7",
+            "d5e7",
+            "e8e7",
+            "f1d1",
+            "f8h6",
+            "d2d4",
+            "h6c1",
+            "d1c1",
+            "e5d4",
+            "c1d1",
+            "e7e4"
+          ],
+          "history_san": [
+            "e4",
+            "a5",
+            "Nf3",
+            "f6",
+            "Nc3",
+            "d6",
+            "Bb5+",
+            "Kf7",
+            "Ne5+",
+            "dxe5",
+            "Be8+",
+            "Qxe8",
+            "Qh5+",
+            "g6",
+            "Qxg6+",
+            "Kxg6",
+            "O-O",
+            "Bg4",
+            "Nd5",
+            "Bd7",
+            "Nxe7+",
+            "Qxe7",
+            "Rd1",
+            "Bh6",
+            "d4",
+            "Bxc1",
+            "Rdxc1",
+            "exd4",
+            "Rd1",
+            "Qxe4"
+          ]
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Play standard chess as White. Choose the strongest legal move to win. Consider opponent replies, hanging pieces, threats, king safety and checkmate. Keys are UCI from-square/to-square (optional promotion), descriptions are SAN. Choose exactly one offered move. You are the sole decision maker: no move has been ranked or filtered for strength. Independently examine opponent checks, captures and threats after your proposed move, including attacks on other pieces. A check or capture is not automatically good. A defended queen can still lose material against a cheaper attacker; assess the full exchange. Develop pieces and coordinate them, protect your king, and convert advantages into checkmate. Use both complete move histories to recognize unproductive repeated maneuvers; avoid repeating positions when you judge that you can win, but consider a draw when losing. These are general instructions, not tactical hints for this position.",
+            "criteria": {
+              "a1b1": "Rab1",
+              "a1c1": "Rac1",
+              "a2a3": "a3",
+              "a2a4": "a4",
+              "b2b3": "b3",
+              "b2b4": "b4",
+              "c2c3": "c3",
+              "c2c4": "c4",
+              "d1b1": "Rdb1",
+              "d1c1": "Rdc1",
+              "d1d2": "Rd2",
+              "d1d3": "Rd3",
+              "d1d4": "Rxd4",
+              "d1e1": "Re1",
+              "d1f1": "Rf1",
+              "f2f3": "f3",
+              "f2f4": "f4",
+              "g1f1": "Kf1",
+              "g1h1": "Kh1",
+              "g2g3": "g3",
+              "g2g4": "g4",
+              "h2h3": "h3",
+              "h2h4": "h4"
+            }
+          }
+        }
+      },
+      "safety": null,
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "move": {
+            "type": "choice",
+            "choice": "d1d4",
+            "probabilities": {
+              "a2a4": 0.01,
+              "c2c4": 0.02,
+              "b2b3": 0.01,
+              "d1d4": 0.45999999999999996,
+              "d1f1": 0.03,
+              "g2g3": 0.02,
+              "g2g4": 0.03,
+              "b2b4": 0.01,
+              "g1f1": 0.03,
+              "d1e1": 0.04,
+              "a2a3": 0.01,
+              "h2h3": 0.01,
+              "f2f3": 0.04,
+              "a1c1": 0.04,
+              "d1d2": 0.04,
+              "f2f4": 0.02,
+              "g1h1": 0.01,
+              "d1c1": 0.04,
+              "a1b1": 0.03,
+              "c2c3": 0.02,
+              "d1b1": 0.01,
+              "h2h4": 0.01,
+              "d1d3": 0.06
+            },
+            "confidence": 0.45
+          }
+        },
+        "usage": {
+          "input_tokens": 1418,
+          "output_tokens": 250,
+          "cost": 5.9556e-05
+        },
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "fen": "rn4nr/1ppb3p/5pk1/p7/3q4/8/PPP2PPP/R5K1 w - - 0 17",
+          "board": "8 r n . . . . n r\n7 . p p b . . . p\n6 . . . . . p k .\n5 p . . . . . . .\n4 . . . q . . . .\n3 . . . . . . . .\n2 P P P . . P P P\n1 R . . . . . K .\n  a b c d e f g h",
+          "legend": "Uppercase = White, lowercase = Black. P pawn, N knight, B bishop, R rook, Q queen, K king; . empty.",
+          "you_play": "White",
+          "in_check": false,
+          "history_uci": [
+            "e2e4",
+            "a7a5",
+            "g1f3",
+            "f7f6",
+            "b1c3",
+            "d7d6",
+            "f1b5",
+            "e8f7",
+            "f3e5",
+            "d6e5",
+            "b5e8",
+            "d8e8",
+            "d1h5",
+            "g7g6",
+            "h5g6",
+            "f7g6",
+            "e1g1",
+            "c8g4",
+            "c3d5",
+            "g4d7",
+            "d5e7",
+            "e8e7",
+            "f1d1",
+            "f8h6",
+            "d2d4",
+            "h6c1",
+            "d1c1",
+            "e5d4",
+            "c1d1",
+            "e7e4",
+            "d1d4",
+            "e4d4"
+          ],
+          "history_san": [
+            "e4",
+            "a5",
+            "Nf3",
+            "f6",
+            "Nc3",
+            "d6",
+            "Bb5+",
+            "Kf7",
+            "Ne5+",
+            "dxe5",
+            "Be8+",
+            "Qxe8",
+            "Qh5+",
+            "g6",
+            "Qxg6+",
+            "Kxg6",
+            "O-O",
+            "Bg4",
+            "Nd5",
+            "Bd7",
+            "Nxe7+",
+            "Qxe7",
+            "Rd1",
+            "Bh6",
+            "d4",
+            "Bxc1",
+            "Rdxc1",
+            "exd4",
+            "Rd1",
+            "Qxe4",
+            "Rxd4",
+            "Qxd4"
+          ]
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Play standard chess as White. Choose the strongest legal move to win. Consider opponent replies, hanging pieces, threats, king safety and checkmate. Keys are UCI from-square/to-square (optional promotion), descriptions are SAN. Choose exactly one offered move. You are the sole decision maker: no move has been ranked or filtered for strength. Independently examine opponent checks, captures and threats after your proposed move, including attacks on other pieces. A check or capture is not automatically good. A defended queen can still lose material against a cheaper attacker; assess the full exchange. Develop pieces and coordinate them, protect your king, and convert advantages into checkmate. Use both complete move histories to recognize unproductive repeated maneuvers; avoid repeating positions when you judge that you can win, but consider a draw when losing. These are general instructions, not tactical hints for this position.",
+            "criteria": {
+              "a1b1": "Rb1",
+              "a1c1": "Rc1",
+              "a1d1": "Rd1",
+              "a1e1": "Re1",
+              "a1f1": "Rf1",
+              "a2a3": "a3",
+              "a2a4": "a4",
+              "b2b3": "b3",
+              "b2b4": "b4",
+              "c2c3": "c3",
+              "c2c4": "c4",
+              "g1f1": "Kf1",
+              "g1h1": "Kh1",
+              "g2g3": "g3",
+              "g2g4": "g4",
+              "h2h3": "h3",
+              "h2h4": "h4"
+            }
+          }
+        }
+      },
+      "safety": null,
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "move": {
+            "type": "choice",
+            "choice": "a1d1",
+            "probabilities": {
+              "g2g4": 0.04,
+              "c2c3": 0.05,
+              "a1d1": 0.2,
+              "a1f1": 0.07,
+              "c2c4": 0.05,
+              "a2a3": 0.04,
+              "h2h4": 0.02,
+              "g1h1": 0.04,
+              "g1f1": 0.09,
+              "g2g3": 0.04,
+              "h2h3": 0.02,
+              "b2b3": 0.03,
+              "a2a4": 0.05,
+              "a1b1": 0.05,
+              "a1e1": 0.09,
+              "b2b4": 0.03,
+              "a1c1": 0.09
+            },
+            "confidence": 0.15
+          }
+        },
+        "usage": {
+          "input_tokens": 1342,
+          "output_tokens": 190,
+          "cost": 5.6364e-05
+        },
+        "provider": "TypeSafe"
+      }
+    }
+  ]
+}
