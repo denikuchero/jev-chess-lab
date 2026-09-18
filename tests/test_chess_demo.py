@@ -11,6 +11,15 @@ import chess_demo
 
 
 class ChessDemoTests(unittest.TestCase):
+    def test_explicit_pieces_are_observations_not_filtered_moves(self):
+        board=chess.Board()
+        body=make_request(board,'test')
+        self.assertEqual(body['state']['pieces']['white']['d1'],'queen')
+        self.assertEqual(body['state']['pieces']['black']['e8'],'king')
+        self.assertEqual(sum(len(v) for v in body['state']['pieces'].values()),32)
+        self.assertIn('knight g1 to f3',body['questions']['move']['criteria']['g1f3'])
+        self.assertEqual(list(body['questions']['move']['criteria']),sorted(m.uci() for m in board.legal_moves))
+
     def test_default_game_never_uses_coach_or_filter(self):
         def reply(body, key, timeout):
             self.assertEqual(set(body['questions']['move']['criteria']), {m.uci() for m in chess.Board().legal_moves})

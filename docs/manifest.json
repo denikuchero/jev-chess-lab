@@ -54,5 +54,19 @@
       "reported_cost_usd": 0.0009187500000000001,
       "requests_with_cost": 17
     }
+  },
+  {
+    "slug": "05-pure-explicit-pieces",
+    "title": "Jev самостоятельно: явное описание фигур",
+    "summary": {
+      "result": "*",
+      "reason": "move_limit; unfinished",
+      "plies": 120,
+      "api_requests": 60,
+      "input_tokens": 125643,
+      "output_tokens": 13170,
+      "reported_cost_usd": 0.005277006000000001,
+      "requests_with_cost": 60
+    }
   }
 ]

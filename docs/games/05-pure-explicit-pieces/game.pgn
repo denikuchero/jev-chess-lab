@@ -1,0 +1,14 @@
+[Event "Jev demo"]
+[Site "?"]
+[Date "2026.09.18"]
+[Round "?"]
+[White "typesafe/jev-1.13"]
+[Black "Local material depth 2"]
+[Result "*"]
+[JevPolicy "raw"]
+[PromptVersion "pure-v3-explicit-pieces"]
+[CoachNodes "100000"]
+[OpponentNodes "15000"]
+[Termination "move_limit; unfinished"]
+
+1. e4 a5 2. Nf3 f6 3. Nc3 d6 4. Bc4 Nh6 5. O-O Qd7 6. Bf7+ Nxf7 7. Ne5 dxe5 8. Nd5 Kd8 9. Nxe7 Kxe7 10. Re1 Qd4 11. d3 g6 12. Be3 Qxb2 13. Bc5+ Nd6 14. Bxd6+ Kxd6 15. Qb1 Qxb1 16. Raxb1 Ke7 17. Rxb7 Bxb7 18. Rd1 Kf7 19. Re1 Kg8 20. Rd1 Nd7 21. Re1 Nb6 22. Rd1 c5 23. Re1 Kg7 24. Rd1 Kf7 25. Re1 Nc8 26. Rd1 Nb6 27. Re1 g5 28. Rd1 Rc8 29. Re1 Bc6 30. Rc1 Kg6 31. Rd1 Be7 32. Re1 a4 33. Rd1 Bf8 34. Re1 Rd8 35. Rd1 Be7 36. Re1 Nd7 37. Rd1 Bb7 38. Re1 Kh5 39. Rd1 Kh4 40. g3+ Kh3 41. Re1 Rc8 42. Rd1 Ba8 43. Re1 h5 44. Rd1 Nf8 45. Re1 Re8 46. Rd1 Rc8 47. Re1 g4 48. Rd1 Ne6 49. Re1 Rce8 50. Rd1 Bc6 51. Re1 Nc7 52. Rd1 Na8 53. Re1 Bb7 54. Rd1 Nc7 55. Re1 Rh7 56. Rd1 Rf7 57. Re1 Rd8 58. Rd1 a3 59. Rc1 Ba6 60. Rd1 Rd6 *

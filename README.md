@@ -1,13 +1,44 @@
 # Jev Chess Lab
 
-Four recorded chess experiments with TypeSafe Jev via OpenRouter: independent play,
+Five recorded chess experiments with TypeSafe Jev via OpenRouter: independent play,
 a tactical filter, Stockfish assistance, and a return to Jev-only play.
 
-**The Stockfish-assisted system won. Both independent Jev runs lost to a small
-local bot. This is not evidence that Jev became a strong chess player.**
+**The Stockfish-assisted system won. Independent Jev still blunders pieces.
+Assisted results are not evidence that Jev became a strong chess player.**
 
-**[Watch all four games](https://denikuchero.github.io/jev-chess-lab/)** ·
+**[Watch all games](https://denikuchero.github.io/jev-chess-lab/)** ·
 [Research notes (Русский)](docs/RESEARCH_RU.md) · [Usage (Русский)](docs/USAGE_RU.md)
+
+## Watch directly on GitHub
+
+Full-game looping GIFs, one ply per second. These are rendered replays, **not real-time recordings**.
+Click a GIF to open the interactive board with step-by-step controls.
+
+### 05 — Jev alone: explicit piece descriptions (new experiment)
+
+Stopped at the 60-call budget, **unfinished**, not a draw. Jev still blundered
+pieces and repeatedly moved its rook between d1 and e1. This prompt experiment
+did not establish a playing-strength improvement.
+
+[![Jev alone: explicit piece descriptions](docs/games/05-pure-explicit-pieces/replay.gif)](https://denikuchero.github.io/jev-chess-lab/games/05-pure-explicit-pieces/replay.html)
+
+### 02 — Jev with a tactical filter (assisted)
+
+This version discarded some blunders in code; it does not represent unaided Jev.
+
+[![Jev with tactical filtering](docs/games/02-guarded/replay.gif)](https://denikuchero.github.io/jev-chess-lab/games/02-guarded/replay.html)
+
+### 01 — Jev alone: original prompt
+
+[![Original independent Jev game](docs/games/01-raw/replay.gif)](https://denikuchero.github.io/jev-chess-lab/games/01-raw/replay.html)
+
+### 04 — Jev alone: longer instructions and full history
+
+[![Independent Jev with history](docs/games/04-pure-history/replay.gif)](https://denikuchero.github.io/jev-chess-lab/games/04-pure-history/replay.html)
+
+### 03 — Jev with Stockfish (engine-assisted, not independent play)
+
+[![Stockfish-assisted system](docs/games/03-stockfish-assisted/replay.gif)](https://denikuchero.github.io/jev-chess-lab/games/03-stockfish-assisted/replay.html)
 
 ## Results
 
@@ -20,6 +51,7 @@ local compute is excluded. One game per configuration; no Elo estimate or traini
 | [02: Guarded](docs/games/02-guarded/game.pgn) | Jev after exchange filtering | Same bot, seed 42 | Draw by repetition | 38 | 58,465 / 8,390 | $0.00245553 |
 | [03: Stockfish-assisted](docs/games/03-stockfish-assisted/game.pgn) | Jev chooses from Stockfish shortlist | Stockfish 14.1, Skill 5 | Won, 38.Rd8# | 38 | 63,194 / 1,522 | $0.002654148 |
 | [04: Pure + history](docs/games/04-pure-history/game.pgn) | Jev, expanded prompt + SAN history | Same local bot, seed 42 | Lost, 17…Qxd1# | 17 | 21,875 / 4,690 | $0.00091875 |
+| [05: Explicit pieces](docs/games/05-pure-explicit-pieces/game.pgn) | Jev, square-to-piece map + descriptive moves | Same local bot, seed 42 | Unfinished at limit, material deficit | 60 | 125,643 / 13,170 | $0.005277006 |
 
 Every game folder includes an interactive HTML board, MP4, PGN and actual JSON
 requests/responses, positions, latency and usage. Provider request IDs were removed.
@@ -33,6 +65,7 @@ real-time demonstrations.** Measured decision latency is shown separately. No au
 - [02 — tactical filter](docs/games/02-guarded/replay.mp4)
 - [03 — Stockfish assistance](docs/games/03-stockfish-assisted/replay.mp4)
 - [04 — independent Jev with history](docs/games/04-pure-history/replay.mp4)
+- [05 — independent Jev with explicit piece descriptions](docs/games/05-pure-explicit-pieces/replay.mp4)
 
 ## Run Jev independently
 
@@ -53,7 +86,10 @@ tactical filtering, Stockfish hints, corrections or fallback moves for White.
 The local bot searches only for Black; its scores are never passed to Jev.
 `python-chess` enforces legality and game termination.
 
-The current raw prompt is `pure-v2-history` (experiment 04). The original prompt
+The current raw prompt is `pure-v3-explicit-pieces` (experiment 05). It adds an
+explicit square-to-piece dictionary and descriptive move labels. These are
+observations, not tactical scores; every legal move remains available.
+The change is experimental and has not established a strength improvement. The original prompt
 is preserved in experiment 01's trace; rerunning current code is not a byte-for-byte
 reproduction of that prompt. API outputs can vary.
 
@@ -112,7 +148,7 @@ Synthetic `--demo` answers are not model evaluations.
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-21 tests passed locally. Default-mode tests reject calls to tactical filters or
+22 tests passed locally. Default-mode tests reject calls to tactical filters or
 Stockfish. Recorded games were checked for legality, final results and PGN/JSON
 agreement. Optional real-Stockfish tests skip if the executable is unavailable.
 
@@ -122,6 +158,7 @@ The exporter uses local original results, or published traces in a fresh clone:
 ```bash
 .venv/bin/pip install -r requirements-media.txt
 .venv/bin/python scripts/publish_artifacts.py
+.venv/bin/python scripts/render_gifs.py
 ```
 
 ## Limitations and attribution

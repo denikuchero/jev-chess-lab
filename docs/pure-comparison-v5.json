@@ -1,0 +1,290 @@
+[
+  {
+    "file": "results/chess-first-game/game.json",
+    "result": "0-1",
+    "reason": "CHECKMATE",
+    "jev_turns": 48,
+    "avoidable_immediate_losses": 10,
+    "risky_moves": [
+      {
+        "turn": 5,
+        "san": "Nd5",
+        "uci": "c3d5",
+        "estimated_loss_pawns": 2.2,
+        "allows_mate_in_one": false,
+        "opponent_reply": "e6d5",
+        "avoidable": true
+      },
+      {
+        "turn": 10,
+        "san": "Bxf6+",
+        "uci": "g5f6",
+        "estimated_loss_pawns": 0.1,
+        "allows_mate_in_one": false,
+        "opponent_reply": "e7f6",
+        "avoidable": true
+      },
+      {
+        "turn": 11,
+        "san": "Ne5",
+        "uci": "f3e5",
+        "estimated_loss_pawns": 3.2,
+        "allows_mate_in_one": false,
+        "opponent_reply": "d6e5",
+        "avoidable": true
+      },
+      {
+        "turn": 13,
+        "san": "Qxh5",
+        "uci": "d1h5",
+        "estimated_loss_pawns": 8.0,
+        "allows_mate_in_one": false,
+        "opponent_reply": "h8h5",
+        "avoidable": true
+      },
+      {
+        "turn": 14,
+        "san": "Rae1+",
+        "uci": "a1e1",
+        "estimated_loss_pawns": 1.0,
+        "allows_mate_in_one": false,
+        "opponent_reply": "e5d5",
+        "avoidable": true
+      },
+      {
+        "turn": 18,
+        "san": "Rxf5+",
+        "uci": "f8f5",
+        "estimated_loss_pawns": 4.0,
+        "allows_mate_in_one": false,
+        "opponent_reply": "e5f5",
+        "avoidable": true
+      },
+      {
+        "turn": 21,
+        "san": "Rd4+",
+        "uci": "d1d4",
+        "estimated_loss_pawns": 5.0,
+        "allows_mate_in_one": false,
+        "opponent_reply": "e4d4",
+        "avoidable": true
+      },
+      {
+        "turn": 24,
+        "san": "Bc6+",
+        "uci": "b5c6",
+        "estimated_loss_pawns": 3.3,
+        "allows_mate_in_one": false,
+        "opponent_reply": "b8c6",
+        "avoidable": true
+      },
+      {
+        "turn": 28,
+        "san": "f4",
+        "uci": "f3f4",
+        "estimated_loss_pawns": 1.0,
+        "allows_mate_in_one": false,
+        "opponent_reply": "e3f4",
+        "avoidable": true
+      },
+      {
+        "turn": 30,
+        "san": "h3+",
+        "uci": "h2h3",
+        "estimated_loss_pawns": 1.0,
+        "allows_mate_in_one": false,
+        "opponent_reply": "g4h3",
+        "avoidable": true
+      },
+      {
+        "turn": 31,
+        "san": "h4",
+        "uci": "h3h4",
+        "estimated_loss_pawns": 1.0,
+        "allows_mate_in_one": false,
+        "opponent_reply": "g3h4",
+        "avoidable": false
+      },
+      {
+        "turn": 33,
+        "san": "Kd2",
+        "uci": "e1d2",
+        "estimated_loss_pawns": 1.0,
+        "allows_mate_in_one": false,
+        "opponent_reply": "g5c5",
+        "avoidable": false
+      },
+      {
+        "turn": 42,
+        "san": "b4",
+        "uci": "b2b4",
+        "estimated_loss_pawns": 1.0,
+        "allows_mate_in_one": false,
+        "opponent_reply": "a4b3",
+        "avoidable": false
+      },
+      {
+        "turn": 43,
+        "san": "Kb2",
+        "uci": "a3b2",
+        "estimated_loss_pawns": 1.0,
+        "allows_mate_in_one": false,
+        "opponent_reply": "a6a2",
+        "avoidable": false
+      },
+      {
+        "turn": 48,
+        "san": "Kc5",
+        "uci": "d4c5",
+        "estimated_loss_pawns": null,
+        "allows_mate_in_one": true,
+        "opponent_reply": "a1c3",
+        "avoidable": false
+      }
+    ],
+    "avoidable_losses_at_least_one_pawn": 9,
+    "final_white_material_advantage_pawns": -28.5,
+    "limitations": "Same-square exchange estimate, not Stockfish or independent strength evaluation. No long tactics. Different positions across games."
+  },
+  {
+    "file": "results/chess-pure-v4/game.json",
+    "result": "0-1",
+    "reason": "CHECKMATE",
+    "jev_turns": 17,
+    "avoidable_immediate_losses": 7,
+    "risky_moves": [
+      {
+        "turn": 5,
+        "san": "Ne5+",
+        "uci": "f3e5",
+        "estimated_loss_pawns": 3.2,
+        "allows_mate_in_one": false,
+        "opponent_reply": "f6e5",
+        "avoidable": true
+      },
+      {
+        "turn": 6,
+        "san": "Be8+",
+        "uci": "b5e8",
+        "estimated_loss_pawns": 3.3,
+        "allows_mate_in_one": false,
+        "opponent_reply": "f7e8",
+        "avoidable": true
+      },
+      {
+        "turn": 8,
+        "san": "Qxg6+",
+        "uci": "h5g6",
+        "estimated_loss_pawns": 8.0,
+        "allows_mate_in_one": false,
+        "opponent_reply": "f7g6",
+        "avoidable": true
+      },
+      {
+        "turn": 11,
+        "san": "Nxe7+",
+        "uci": "d5e7",
+        "estimated_loss_pawns": 2.2,
+        "allows_mate_in_one": false,
+        "opponent_reply": "g8e7",
+        "avoidable": true
+      },
+      {
+        "turn": 15,
+        "san": "Rd1",
+        "uci": "c1d1",
+        "estimated_loss_pawns": 1.0,
+        "allows_mate_in_one": false,
+        "opponent_reply": "e7e4",
+        "avoidable": true
+      },
+      {
+        "turn": 16,
+        "san": "Rxd4",
+        "uci": "d1d4",
+        "estimated_loss_pawns": 4.0,
+        "allows_mate_in_one": false,
+        "opponent_reply": "e4d4",
+        "avoidable": true
+      },
+      {
+        "turn": 17,
+        "san": "Rd1",
+        "uci": "a1d1",
+        "estimated_loss_pawns": null,
+        "allows_mate_in_one": true,
+        "opponent_reply": "d4d1",
+        "avoidable": true
+      }
+    ],
+    "avoidable_losses_at_least_one_pawn": 7,
+    "final_white_material_advantage_pawns": -27.7,
+    "limitations": "Same-square exchange estimate, not Stockfish or independent strength evaluation. No long tactics. Different positions across games."
+  },
+  {
+    "file": "results/chess-pure-v5/game.json",
+    "result": "*",
+    "reason": "move_limit; unfinished",
+    "jev_turns": 60,
+    "avoidable_immediate_losses": 6,
+    "risky_moves": [
+      {
+        "turn": 6,
+        "san": "Bf7+",
+        "uci": "c4f7",
+        "estimated_loss_pawns": 3.3,
+        "allows_mate_in_one": false,
+        "opponent_reply": "e8f7",
+        "avoidable": true
+      },
+      {
+        "turn": 7,
+        "san": "Ne5",
+        "uci": "f3e5",
+        "estimated_loss_pawns": 3.2,
+        "allows_mate_in_one": false,
+        "opponent_reply": "f7e5",
+        "avoidable": true
+      },
+      {
+        "turn": 9,
+        "san": "Nxe7",
+        "uci": "d5e7",
+        "estimated_loss_pawns": 2.2,
+        "allows_mate_in_one": false,
+        "opponent_reply": "f8e7",
+        "avoidable": true
+      },
+      {
+        "turn": 12,
+        "san": "Be3",
+        "uci": "c1e3",
+        "estimated_loss_pawns": 1.0,
+        "allows_mate_in_one": false,
+        "opponent_reply": "d4b2",
+        "avoidable": true
+      },
+      {
+        "turn": 14,
+        "san": "Bxd6+",
+        "uci": "c5d6",
+        "estimated_loss_pawns": 0.1,
+        "allows_mate_in_one": false,
+        "opponent_reply": "e7d6",
+        "avoidable": true
+      },
+      {
+        "turn": 17,
+        "san": "Rxb7",
+        "uci": "b1b7",
+        "estimated_loss_pawns": 4.0,
+        "allows_mate_in_one": false,
+        "opponent_reply": "c8b7",
+        "avoidable": true
+      }
+    ],
+    "avoidable_losses_at_least_one_pawn": 5,
+    "final_white_material_advantage_pawns": -13.8,
+    "limitations": "Same-square exchange estimate, not Stockfish or independent strength evaluation. No long tactics. Different positions across games."
+  }
+]

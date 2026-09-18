@@ -1,5 +1,6 @@
 """Export public research records and render annotated PGN replays (not live footage)."""
 import copy
+import argparse
 import html
 import io
 import json
@@ -19,6 +20,7 @@ GAMES = [
     ('chess-guarded-v2', '02-guarded', 'Jev + локальный фильтр', 'Код исключает обнаруженные потери материала.'),
     ('chess-coach-v3-skill5', '03-stockfish-assisted', 'Jev + Stockfish: опыт с помощником', 'Stockfish отбирает хорошие ходы. Это не чистая Jev.'),
     ('chess-pure-v4', '04-pure-history', 'Jev самостоятельно: история и инструкция', 'Все легальные ходы. Без помощников и отсева зевков.'),
+    ('chess-pure-v5', '05-pure-explicit-pieces', 'Jev самостоятельно: явное описание фигур', 'Клетки и фигуры словами. Без оценки и фильтра ходов.'),
 ]
 
 
@@ -66,6 +68,9 @@ def draw_frame(board, row, title, subtitle, summary, output):
 
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--reuse-media',action='store_true',help='Keep existing videos/posters; only render missing ones')
+    args=parser.parse_args()
     cards=[]
     manifest=[]
     for source, slug, title, subtitle in GAMES:
@@ -85,34 +90,35 @@ def main():
         if slug=='04-pure-history':
             page=page.replace('<h1>Jev — белые; простой бот — чёрные</h1>',f'<h1>{title}</h1>')
         (dest/'replay.html').write_text(page,encoding='utf-8')
-        with tempfile.TemporaryDirectory(prefix='jev-video-') as tmp:
-            folder=Path(tmp)
-            board=chess.Board()
-            rows=[None]+data['moves']
-            for i,row in enumerate(rows):
-                if row:
-                    move=chess.Move.from_uci(row['uci'])
-                    assert move in board.legal_moves
-                    board.push(move)
-                draw_frame(board,row,title,subtitle,data['summary'],folder/f'{i:04}.png')
-            shutil.copyfile(folder/'0000.png',dest/'poster.png')
-            subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y','-framerate','1',
-                            '-i',str(folder/'%04d.png'),'-vf','fps=24','-c:v','libx264',
-                            '-preset','veryfast','-threads','2','-crf','23','-pix_fmt','yuv420p','-movflags','+faststart',
-                            str(dest/'replay.mp4')],check=True)
+        if not (args.reuse_media and (dest/'replay.mp4').exists() and (dest/'poster.png').exists()):
+            with tempfile.TemporaryDirectory(prefix='jev-video-') as tmp:
+                folder=Path(tmp)
+                board=chess.Board()
+                rows=[None]+data['moves']
+                for i,row in enumerate(rows):
+                    if row:
+                        move=chess.Move.from_uci(row['uci'])
+                        assert move in board.legal_moves
+                        board.push(move)
+                    draw_frame(board,row,title,subtitle,data['summary'],folder/f'{i:04}.png')
+                shutil.copyfile(folder/'0000.png',dest/'poster.png')
+                subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y','-framerate','1',
+                                '-i',str(folder/'%04d.png'),'-vf','fps=24','-c:v','libx264',
+                                '-preset','veryfast','-threads','2','-crf','23','-pix_fmt','yuv420p','-movflags','+faststart',
+                                str(dest/'replay.mp4')],check=True)
         stats=data['summary']
         manifest.append(dict(slug=slug,title=title,summary=stats))
         cards.append(f'''<article><h2>{html.escape(title)}</h2><p>{html.escape(subtitle)}</p>
 <video controls preload="none" poster="games/{slug}/poster.png" src="games/{slug}/replay.mp4"></video>
 <p>Результат: <b>{stats['result']}</b> · запросов: {stats['api_requests']} · стоимость API: ${stats['reported_cost_usd']:.6f}</p>
-<p><a href="games/{slug}/replay.html">Интерактивная доска</a> · <a href="games/{slug}/replay.mp4">Видео MP4</a> · <a href="games/{slug}/game.pgn">PGN</a> · <a href="games/{slug}/game.json">Запросы и ответы</a></p></article>''')
+<p><a href="games/{slug}/replay.html">Интерактивная доска</a> · <a href="games/{slug}/replay.gif">GIF</a> · <a href="games/{slug}/replay.mp4">Видео MP4</a> · <a href="games/{slug}/game.pgn">PGN</a> · <a href="games/{slug}/game.json">Запросы и ответы</a></p></article>''')
         print(f'Exported {slug}: {stats["result"]}',flush=True)
     (ROOT/'docs/manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
     (ROOT/'docs/.nojekyll').touch()
     (ROOT/'docs/index.html').write_text('''<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Jev Chess Lab — четыре эксперимента</title><style>body{max-width:1100px;margin:40px auto;padding:0 20px;background:#111b2b;color:#eaf0ff;font:18px system-ui;line-height:1.55}a{color:#9edbff}article{padding:24px;background:#1c2b41;border-radius:16px;margin:26px 0}video{width:100%;border-radius:10px}h1{line-height:1.2}</style>
-<h1>Jev Chess Lab</h1><p>Четыре партии: самостоятельная Jev, фильтр разменов, помощь Stockfish и возвращение к самостоятельной игре.</p>
-<p><b>Победа со Stockfish — результат системы с движком, а не доказательство силы Jev.</b> Самостоятельные версии проиграли простому боту. Мы публикуем и успехи, и неудачи.</p>
+<title>Jev Chess Lab — шахматные эксперименты</title><style>body{max-width:1100px;margin:40px auto;padding:0 20px;background:#111b2b;color:#eaf0ff;font:18px system-ui;line-height:1.55}a{color:#9edbff}article{padding:24px;background:#1c2b41;border-radius:16px;margin:26px 0}video{width:100%;border-radius:10px}h1{line-height:1.2}</style>
+<h1>Jev Chess Lab</h1><p>Самостоятельная Jev, фильтр разменов, помощь Stockfish и эксперименты с представлением позиции.</p>
+<p><b>Победа со Stockfish — результат системы с движком, а не доказательство силы Jev.</b> Мы публикуем и успехи, и неудачи; итоги всех самостоятельных партий показаны ниже.</p>
 <p>Видео восстановлены из сохранённых легальных ходов: один полуход в секунду. Это визуализация партий, не запись экрана и не скорость реальной игры. Время решений указано отдельно. Стоимость включает только API, не вычисления локального движка.</p>
 <p><a href="https://github.com/denikuchero/jev-chess-lab">Код, методика и ограничения на GitHub</a></p>'''+''.join(cards)+'''<p>Одна партия на вариант; соперники и условия различаются. Это учебное исследование, не рейтинг Elo, не обучение весов Jev и не контролируемый бенчмарк.</p></html>''',encoding='utf-8')
 

@@ -20,7 +20,7 @@ from chess_coach import engine_path, engine_filter
 VALUES = {chess.PAWN: 100, chess.KNIGHT: 320, chess.BISHOP: 330,
           chess.ROOK: 500, chess.QUEEN: 900, chess.KING: 0}
 DEFAULT_POLICY = 'raw'
-PURE_PROMPT_VERSION = 'pure-v2-history'
+PURE_PROMPT_VERSION = 'pure-v3-explicit-pieces'
 
 
 def evaluate(board):
@@ -92,7 +92,35 @@ def make_request(board, model, safety=None):
     if safety:
         body['questions']['move']['instructions'] += (' Prioritize winning material safely, protect ALL your pieces, develop pieces, castle and coordinate attacks. A check is not automatically a good move. Avoid repeated queen/rook checks without benefit. Never assume a defended piece is safe: trading a queen for a pawn loses material. Consider opponent captures and forks after every candidate. Finish with mate when available. The local filter is limited and not proof of safety.')
     else:
-        body['questions']['move']['instructions'] += (' You are the sole decision maker: no move has been ranked or filtered for strength. Independently examine opponent checks, captures and threats after your proposed move, including attacks on other pieces. A check or capture is not automatically good. A defended queen can still lose material against a cheaper attacker; assess the full exchange. Develop pieces and coordinate them, protect your king, and convert advantages into checkmate. Use both complete move histories to recognize unproductive repeated maneuvers; avoid repeating positions when you judge that you can win, but consider a draw when losing. These are general instructions, not tactical hints for this position.')
+        # Describe observed pieces and move semantics, never evaluate or rank a move.
+        state['pieces'] = {
+            'white': {chess.square_name(sq): chess.piece_name(p.piece_type)
+                      for sq, p in sorted(board.piece_map().items()) if p.color == chess.WHITE},
+            'black': {chess.square_name(sq): chess.piece_name(p.piece_type)
+                      for sq, p in sorted(board.piece_map().items()) if p.color == chess.BLACK}}
+        for uci in criteria:
+            move = chess.Move.from_uci(uci)
+            piece = board.piece_at(move.from_square)
+            description = f'{chess.piece_name(piece.piece_type)} {chess.square_name(move.from_square)} to {chess.square_name(move.to_square)}'
+            captured = board.piece_at(move.to_square)
+            if board.is_en_passant(move):
+                description += '; captures pawn en passant'
+            elif captured:
+                description += f'; captures {chess.piece_name(captured.piece_type)}'
+            if move.promotion:
+                description += f'; promotes to {chess.piece_name(move.promotion)}'
+            if board.is_castling(move):
+                description += '; castling'
+            criteria[uci] = description + f'; SAN {criteria[uci]}'
+        body['questions']['move']['instructions'] = (
+            'Choose one legal White move. You alone evaluate the moves; their list is unranked. '
+            'Use the explicit piece locations to check the destination and any lines opened by moving. '
+            'First consider whether Black can capture your queen, rook or minor pieces after the move. '
+            'Count both sides of an exchange: pawn=1, knight/bishop=3, rook=5, queen=9. '
+            'Prefer keeping material unless you can establish a concrete profitable continuation. '
+            'Giving check is NOT compensation for losing a piece. When no tactic works, develop or improve a safe piece. '
+            'Protect your king and aim for checkmate. Read the history to avoid purposeless repeats when ahead; '
+            'a draw can be useful when losing. Return one offered UCI move.')
     return body
 
 
